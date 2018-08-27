@@ -37,22 +37,22 @@ throw cljs.core.ex_info.call(null,"Unexpected class for doc node",new cljs.core.
 }
 }
 });
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"text","text",-1790561697),(function (p__10996){
-var vec__10997 = p__10996;
-var _ = cljs.core.nth.call(null,vec__10997,(0),null);
-var text = cljs.core.nthnext.call(null,vec__10997,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"text","text",-1790561697),(function (p__11032){
+var vec__11033 = p__11032;
+var _ = cljs.core.nth.call(null,vec__11033,(0),null);
+var text = cljs.core.nthnext.call(null,vec__11033,(1));
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"text","text",-1790561697),new cljs.core.Keyword(null,"text","text",-1790561697),cljs.core.apply.call(null,cljs.core.str,text)], null)], null);
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"pass","pass",1574159993),(function (p__10998){
-var vec__10999 = p__10998;
-var _ = cljs.core.nth.call(null,vec__10999,(0),null);
-var text = cljs.core.nthnext.call(null,vec__10999,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"pass","pass",1574159993),(function (p__11034){
+var vec__11035 = p__11034;
+var _ = cljs.core.nth.call(null,vec__11035,(0),null);
+var text = cljs.core.nthnext.call(null,vec__11035,(1));
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"pass","pass",1574159993),new cljs.core.Keyword(null,"text","text",-1790561697),cljs.core.apply.call(null,cljs.core.str,text)], null)], null);
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"escaped","escaped",-1007929769),(function (p__11000){
-var vec__11001 = p__11000;
-var _ = cljs.core.nth.call(null,vec__11001,(0),null);
-var text = cljs.core.nth.call(null,vec__11001,(1),null);
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"escaped","escaped",-1007929769),(function (p__11036){
+var vec__11037 = p__11036;
+var _ = cljs.core.nth.call(null,vec__11037,(0),null);
+var text = cljs.core.nth.call(null,vec__11037,(1),null);
 if(typeof text === 'string'){
 } else {
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"string?","string?",-1129175764,null),new cljs.core.Symbol(null,"text","text",-150030170,null))))].join('')));
@@ -60,17 +60,17 @@ throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_st
 
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"escaped","escaped",-1007929769),new cljs.core.Keyword(null,"text","text",-1790561697),text], null)], null);
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"span","span",1394872991),(function (p__11002){
-var vec__11003 = p__11002;
-var _ = cljs.core.nth.call(null,vec__11003,(0),null);
-var children = cljs.core.nthnext.call(null,vec__11003,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"span","span",1394872991),(function (p__11038){
+var vec__11039 = p__11038;
+var _ = cljs.core.nth.call(null,vec__11039,(0),null);
+var children = cljs.core.nthnext.call(null,vec__11039,(1));
 return fipp.engine.serialize.call(null,children);
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"line","line",212345235),(function (p__11004){
-var vec__11005 = p__11004;
-var _ = cljs.core.nth.call(null,vec__11005,(0),null);
-var inline = cljs.core.nth.call(null,vec__11005,(1),null);
-var terminate = cljs.core.nth.call(null,vec__11005,(2),null);
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"line","line",212345235),(function (p__11040){
+var vec__11041 = p__11040;
+var _ = cljs.core.nth.call(null,vec__11041,(0),null);
+var inline = cljs.core.nth.call(null,vec__11041,(1),null);
+var terminate = cljs.core.nth.call(null,vec__11041,(2),null);
 var inline__$1 = (function (){var or__5008__auto__ = inline;
 if(cljs.core.truth_(or__5008__auto__)){
 return or__5008__auto__;
@@ -98,48 +98,48 @@ throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_st
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"line","line",212345235),new cljs.core.Keyword(null,"inline","inline",1399884222),inline__$1,new cljs.core.Keyword(null,"terminate","terminate",1256003496),terminate__$1], null)], null);
 }));
 cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"break","break",126570225),(function() { 
-var G__11006__delegate = function (_){
+var G__11042__delegate = function (_){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"break","break",126570225)], null)], null);
 };
-var G__11006 = function (var_args){
+var G__11042 = function (var_args){
 var _ = null;
 if (arguments.length > 0) {
-var G__11007__i = 0, G__11007__a = new Array(arguments.length -  0);
-while (G__11007__i < G__11007__a.length) {G__11007__a[G__11007__i] = arguments[G__11007__i + 0]; ++G__11007__i;}
-  _ = new cljs.core.IndexedSeq(G__11007__a,0);
+var G__11043__i = 0, G__11043__a = new Array(arguments.length -  0);
+while (G__11043__i < G__11043__a.length) {G__11043__a[G__11043__i] = arguments[G__11043__i + 0]; ++G__11043__i;}
+  _ = new cljs.core.IndexedSeq(G__11043__a,0);
 } 
-return G__11006__delegate.call(this,_);};
-G__11006.cljs$lang$maxFixedArity = 0;
-G__11006.cljs$lang$applyTo = (function (arglist__11008){
-var _ = cljs.core.seq(arglist__11008);
-return G__11006__delegate(_);
+return G__11042__delegate.call(this,_);};
+G__11042.cljs$lang$maxFixedArity = 0;
+G__11042.cljs$lang$applyTo = (function (arglist__11044){
+var _ = cljs.core.seq(arglist__11044);
+return G__11042__delegate(_);
 });
-G__11006.cljs$core$IFn$_invoke$arity$variadic = G__11006__delegate;
-return G__11006;
+G__11042.cljs$core$IFn$_invoke$arity$variadic = G__11042__delegate;
+return G__11042;
 })()
 );
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"group","group",582596132),(function (p__11009){
-var vec__11010 = p__11009;
-var _ = cljs.core.nth.call(null,vec__11010,(0),null);
-var children = cljs.core.nthnext.call(null,vec__11010,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"group","group",582596132),(function (p__11045){
+var vec__11046 = p__11045;
+var _ = cljs.core.nth.call(null,vec__11046,(0),null);
+var children = cljs.core.nthnext.call(null,vec__11046,(1));
 return cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"begin","begin",-319034319)], null)], null),fipp.engine.serialize.call(null,children),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"end","end",-268185958)], null)], null));
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"nest","nest",-314993663),(function (p__11011){
-var vec__11012 = p__11011;
-var _ = cljs.core.nth.call(null,vec__11012,(0),null);
-var args = cljs.core.nthnext.call(null,vec__11012,(1));
-var vec__11013 = ((typeof cljs.core.first.call(null,args) === 'number')?args:cljs.core.cons.call(null,(2),args));
-var offset = cljs.core.nth.call(null,vec__11013,(0),null);
-var children = cljs.core.nthnext.call(null,vec__11013,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"nest","nest",-314993663),(function (p__11047){
+var vec__11048 = p__11047;
+var _ = cljs.core.nth.call(null,vec__11048,(0),null);
+var args = cljs.core.nthnext.call(null,vec__11048,(1));
+var vec__11049 = ((typeof cljs.core.first.call(null,args) === 'number')?args:cljs.core.cons.call(null,(2),args));
+var offset = cljs.core.nth.call(null,vec__11049,(0),null);
+var children = cljs.core.nthnext.call(null,vec__11049,(1));
 return cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"nest","nest",-314993663),new cljs.core.Keyword(null,"offset","offset",296498311),offset], null)], null),fipp.engine.serialize.call(null,children),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"outdent","outdent",467209411)], null)], null));
 }));
-cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"align","align",1964212802),(function (p__11014){
-var vec__11015 = p__11014;
-var _ = cljs.core.nth.call(null,vec__11015,(0),null);
-var args = cljs.core.nthnext.call(null,vec__11015,(1));
-var vec__11016 = ((typeof cljs.core.first.call(null,args) === 'number')?args:cljs.core.cons.call(null,(0),args));
-var offset = cljs.core.nth.call(null,vec__11016,(0),null);
-var children = cljs.core.nthnext.call(null,vec__11016,(1));
+cljs.core._add_method.call(null,fipp.engine.serialize_node,new cljs.core.Keyword(null,"align","align",1964212802),(function (p__11050){
+var vec__11051 = p__11050;
+var _ = cljs.core.nth.call(null,vec__11051,(0),null);
+var args = cljs.core.nthnext.call(null,vec__11051,(1));
+var vec__11052 = ((typeof cljs.core.first.call(null,args) === 'number')?args:cljs.core.cons.call(null,(0),args));
+var offset = cljs.core.nth.call(null,vec__11052,(0),null);
+var children = cljs.core.nthnext.call(null,vec__11052,(1));
 return cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"align","align",1964212802),new cljs.core.Keyword(null,"offset","offset",296498311),offset], null)], null),fipp.engine.serialize.call(null,children),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"op","op",-1882987955),new cljs.core.Keyword(null,"outdent","outdent",467209411)], null)], null));
 }));
 /**
@@ -152,16 +152,16 @@ fipp.engine.annotate_rights = (function fipp$engine$annotate_rights(rf){
 var pos = cljs.core.volatile_BANG_.call(null,(0));
 return ((function (pos){
 return (function() {
-var G__11019 = null;
-var G__11019__0 = (function (){
+var G__11055 = null;
+var G__11055__0 = (function (){
 return rf.call(null);
 });
-var G__11019__1 = (function (res){
+var G__11055__1 = (function (res){
 return rf.call(null,res);
 });
-var G__11019__2 = (function (res,node){
-var delta = (function (){var G__11018 = (((new cljs.core.Keyword(null,"op","op",-1882987955).cljs$core$IFn$_invoke$arity$1(node) instanceof cljs.core.Keyword))?new cljs.core.Keyword(null,"op","op",-1882987955).cljs$core$IFn$_invoke$arity$1(node).fqn:null);
-switch (G__11018) {
+var G__11055__2 = (function (res,node){
+var delta = (function (){var G__11054 = (((new cljs.core.Keyword(null,"op","op",-1882987955).cljs$core$IFn$_invoke$arity$1(node) instanceof cljs.core.Keyword))?new cljs.core.Keyword(null,"op","op",-1882987955).cljs$core$IFn$_invoke$arity$1(node).fqn:null);
+switch (G__11054) {
 case "text":
 return cljs.core.count.call(null,new cljs.core.Keyword(null,"text","text",-1790561697).cljs$core$IFn$_invoke$arity$1(node));
 
@@ -182,34 +182,34 @@ return (0);
 var p = cljs.core._vreset_BANG_.call(null,pos,(cljs.core._deref.call(null,pos) + delta));
 return rf.call(null,res,cljs.core.assoc.call(null,node,new cljs.core.Keyword(null,"right","right",-452581833),p));
 });
-G__11019 = function(res,node){
+G__11055 = function(res,node){
 switch(arguments.length){
 case 0:
-return G__11019__0.call(this);
+return G__11055__0.call(this);
 case 1:
-return G__11019__1.call(this,res);
+return G__11055__1.call(this,res);
 case 2:
-return G__11019__2.call(this,res,node);
+return G__11055__2.call(this,res,node);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__11019.cljs$core$IFn$_invoke$arity$0 = G__11019__0;
-G__11019.cljs$core$IFn$_invoke$arity$1 = G__11019__1;
-G__11019.cljs$core$IFn$_invoke$arity$2 = G__11019__2;
-return G__11019;
+G__11055.cljs$core$IFn$_invoke$arity$0 = G__11055__0;
+G__11055.cljs$core$IFn$_invoke$arity$1 = G__11055__1;
+G__11055.cljs$core$IFn$_invoke$arity$2 = G__11055__2;
+return G__11055;
 })()
 ;})(pos))
 });
 fipp.engine.update_right = (function fipp$engine$update_right(){
 var args__6054__auto__ = [];
-var len__6047__auto___11024 = arguments.length;
-var i__6048__auto___11025 = (0);
+var len__6047__auto___11060 = arguments.length;
+var i__6048__auto___11061 = (0);
 while(true){
-if((i__6048__auto___11025 < len__6047__auto___11024)){
-args__6054__auto__.push((arguments[i__6048__auto___11025]));
+if((i__6048__auto___11061 < len__6047__auto___11060)){
+args__6054__auto__.push((arguments[i__6048__auto___11061]));
 
-var G__11026 = (i__6048__auto___11025 + (1));
-i__6048__auto___11025 = G__11026;
+var G__11062 = (i__6048__auto___11061 + (1));
+i__6048__auto___11061 = G__11062;
 continue;
 } else {
 }
@@ -226,12 +226,12 @@ return fipp.deque.conjr.call(null,cljs.core.pop.call(null,deque),cljs.core.apply
 
 fipp.engine.update_right.cljs$lang$maxFixedArity = (2);
 
-fipp.engine.update_right.cljs$lang$applyTo = (function (seq11021){
-var G__11022 = cljs.core.first.call(null,seq11021);
-var seq11021__$1 = cljs.core.next.call(null,seq11021);
-var G__11023 = cljs.core.first.call(null,seq11021__$1);
-var seq11021__$2 = cljs.core.next.call(null,seq11021__$1);
-return fipp.engine.update_right.cljs$core$IFn$_invoke$arity$variadic(G__11022,G__11023,seq11021__$2);
+fipp.engine.update_right.cljs$lang$applyTo = (function (seq11057){
+var G__11058 = cljs.core.first.call(null,seq11057);
+var seq11057__$1 = cljs.core.next.call(null,seq11057);
+var G__11059 = cljs.core.first.call(null,seq11057__$1);
+var seq11057__$2 = cljs.core.next.call(null,seq11057__$1);
+return fipp.engine.update_right.cljs$core$IFn$_invoke$arity$variadic(G__11058,G__11059,seq11057__$2);
 });
 /**
  * Given printing options, returns a transducer which annotate the right-side
@@ -239,30 +239,30 @@ return fipp.engine.update_right.cljs$core$IFn$_invoke$arity$variadic(G__11022,G_
  * will annotate some :begin nodes as being :too-far to the right without
  * calculating their exact sizes.
  */
-fipp.engine.annotate_begins = (function fipp$engine$annotate_begins(p__11027){
-var map__11033 = p__11027;
-var map__11033__$1 = ((((!((map__11033 == null)))?((((map__11033.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11033.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11033):map__11033);
-var options = map__11033__$1;
-var width = cljs.core.get.call(null,map__11033__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-return ((function (map__11033,map__11033__$1,options,width){
+fipp.engine.annotate_begins = (function fipp$engine$annotate_begins(p__11063){
+var map__11069 = p__11063;
+var map__11069__$1 = ((((!((map__11069 == null)))?((((map__11069.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11069.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11069):map__11069);
+var options = map__11069__$1;
+var width = cljs.core.get.call(null,map__11069__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+return ((function (map__11069,map__11069__$1,options,width){
 return (function (rf){
 var pos = cljs.core.volatile_BANG_.call(null,(0));
 var bufs = cljs.core.volatile_BANG_.call(null,fipp.deque.empty);
-return ((function (pos,bufs,map__11033,map__11033__$1,options,width){
+return ((function (pos,bufs,map__11069,map__11069__$1,options,width){
 return (function() {
-var G__11038 = null;
-var G__11038__0 = (function (){
+var G__11074 = null;
+var G__11074__0 = (function (){
 return rf.call(null);
 });
-var G__11038__1 = (function (res){
+var G__11074__1 = (function (res){
 return rf.call(null,res);
 });
-var G__11038__2 = (function (res,p__11035){
-var map__11036 = p__11035;
-var map__11036__$1 = ((((!((map__11036 == null)))?((((map__11036.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11036.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11036):map__11036);
-var node = map__11036__$1;
-var op = cljs.core.get.call(null,map__11036__$1,new cljs.core.Keyword(null,"op","op",-1882987955));
-var right = cljs.core.get.call(null,map__11036__$1,new cljs.core.Keyword(null,"right","right",-452581833));
+var G__11074__2 = (function (res,p__11071){
+var map__11072 = p__11071;
+var map__11072__$1 = ((((!((map__11072 == null)))?((((map__11072.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11072.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11072):map__11072);
+var node = map__11072__$1;
+var op = cljs.core.get.call(null,map__11072__$1,new cljs.core.Keyword(null,"op","op",-1882987955));
+var right = cljs.core.get.call(null,map__11072__$1,new cljs.core.Keyword(null,"right","right",-452581833));
 var buffers = cljs.core.deref.call(null,bufs);
 if(cljs.core.empty_QMARK_.call(null,buffers)){
 if(cljs.core._EQ_.call(null,op,new cljs.core.Keyword(null,"begin","begin",-319034319))){
@@ -326,10 +326,10 @@ return res_STAR___$1;
 } else {
 cljs.core.vreset_BANG_.call(null,pos,new cljs.core.Keyword(null,"position","position",-2011731912).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,buffers_STAR__STAR_)));
 
-var G__11039 = buffers_STAR__STAR_;
-var G__11040 = res_STAR___$1;
-buffers_STAR_ = G__11039;
-res__$1 = G__11040;
+var G__11075 = buffers_STAR__STAR_;
+var G__11076 = res_STAR___$1;
+buffers_STAR_ = G__11075;
+res__$1 = G__11076;
 continue;
 }
 }
@@ -338,59 +338,59 @@ break;
 }
 }
 });
-G__11038 = function(res,p__11035){
+G__11074 = function(res,p__11071){
 switch(arguments.length){
 case 0:
-return G__11038__0.call(this);
+return G__11074__0.call(this);
 case 1:
-return G__11038__1.call(this,res);
+return G__11074__1.call(this,res);
 case 2:
-return G__11038__2.call(this,res,p__11035);
+return G__11074__2.call(this,res,p__11071);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__11038.cljs$core$IFn$_invoke$arity$0 = G__11038__0;
-G__11038.cljs$core$IFn$_invoke$arity$1 = G__11038__1;
-G__11038.cljs$core$IFn$_invoke$arity$2 = G__11038__2;
-return G__11038;
+G__11074.cljs$core$IFn$_invoke$arity$0 = G__11074__0;
+G__11074.cljs$core$IFn$_invoke$arity$1 = G__11074__1;
+G__11074.cljs$core$IFn$_invoke$arity$2 = G__11074__2;
+return G__11074;
 })()
-;})(pos,bufs,map__11033,map__11033__$1,options,width))
+;})(pos,bufs,map__11069,map__11069__$1,options,width))
 });
-;})(map__11033,map__11033__$1,options,width))
+;})(map__11069,map__11069__$1,options,width))
 });
 /**
  * Given printing options, returns a transducer which produces the fully
  * laid-out strings.
  */
-fipp.engine.format_nodes = (function fipp$engine$format_nodes(p__11041){
-var map__11048 = p__11041;
-var map__11048__$1 = ((((!((map__11048 == null)))?((((map__11048.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11048.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11048):map__11048);
-var options = map__11048__$1;
-var width = cljs.core.get.call(null,map__11048__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-return ((function (map__11048,map__11048__$1,options,width){
+fipp.engine.format_nodes = (function fipp$engine$format_nodes(p__11077){
+var map__11084 = p__11077;
+var map__11084__$1 = ((((!((map__11084 == null)))?((((map__11084.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11084.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11084):map__11084);
+var options = map__11084__$1;
+var width = cljs.core.get.call(null,map__11084__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+return ((function (map__11084,map__11084__$1,options,width){
 return (function (rf){
 var fits = cljs.core.volatile_BANG_.call(null,(0));
 var length = cljs.core.volatile_BANG_.call(null,width);
 var tab_stops = cljs.core.volatile_BANG_.call(null,cljs.core.list((0)));
 var column = cljs.core.volatile_BANG_.call(null,(0));
-return ((function (fits,length,tab_stops,column,map__11048,map__11048__$1,options,width){
+return ((function (fits,length,tab_stops,column,map__11084,map__11084__$1,options,width){
 return (function() {
-var G__11054 = null;
-var G__11054__0 = (function (){
+var G__11090 = null;
+var G__11090__0 = (function (){
 return rf.call(null);
 });
-var G__11054__1 = (function (res){
+var G__11090__1 = (function (res){
 return rf.call(null,res);
 });
-var G__11054__2 = (function (res,p__11050){
-var map__11051 = p__11050;
-var map__11051__$1 = ((((!((map__11051 == null)))?((((map__11051.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11051.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11051):map__11051);
-var node = map__11051__$1;
-var op = cljs.core.get.call(null,map__11051__$1,new cljs.core.Keyword(null,"op","op",-1882987955));
-var right = cljs.core.get.call(null,map__11051__$1,new cljs.core.Keyword(null,"right","right",-452581833));
+var G__11090__2 = (function (res,p__11086){
+var map__11087 = p__11086;
+var map__11087__$1 = ((((!((map__11087 == null)))?((((map__11087.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11087.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11087):map__11087);
+var node = map__11087__$1;
+var op = cljs.core.get.call(null,map__11087__$1,new cljs.core.Keyword(null,"op","op",-1882987955));
+var right = cljs.core.get.call(null,map__11087__$1,new cljs.core.Keyword(null,"right","right",-452581833));
 var indent = cljs.core.peek.call(null,cljs.core.deref.call(null,tab_stops));
-var G__11053 = (((op instanceof cljs.core.Keyword))?op.fqn:null);
-switch (G__11053) {
+var G__11089 = (((op instanceof cljs.core.Keyword))?op.fqn:null);
+switch (G__11089) {
 case "nest":
 cljs.core._vreset_BANG_.call(null,tab_stops,cljs.core.conj.call(null,cljs.core._deref.call(null,tab_stops),(indent + new cljs.core.Keyword(null,"offset","offset",296498311).cljs$core$IFn$_invoke$arity$1(node))));
 
@@ -483,29 +483,29 @@ throw cljs.core.ex_info.call(null,"Unexpected node op",new cljs.core.PersistentA
 
 }
 });
-G__11054 = function(res,p__11050){
+G__11090 = function(res,p__11086){
 switch(arguments.length){
 case 0:
-return G__11054__0.call(this);
+return G__11090__0.call(this);
 case 1:
-return G__11054__1.call(this,res);
+return G__11090__1.call(this,res);
 case 2:
-return G__11054__2.call(this,res,p__11050);
+return G__11090__2.call(this,res,p__11086);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__11054.cljs$core$IFn$_invoke$arity$0 = G__11054__0;
-G__11054.cljs$core$IFn$_invoke$arity$1 = G__11054__1;
-G__11054.cljs$core$IFn$_invoke$arity$2 = G__11054__2;
-return G__11054;
+G__11090.cljs$core$IFn$_invoke$arity$0 = G__11090__0;
+G__11090.cljs$core$IFn$_invoke$arity$1 = G__11090__1;
+G__11090.cljs$core$IFn$_invoke$arity$2 = G__11090__2;
+return G__11090;
 })()
-;})(fits,length,tab_stops,column,map__11048,map__11048__$1,options,width))
+;})(fits,length,tab_stops,column,map__11084,map__11084__$1,options,width))
 });
-;})(map__11048,map__11048__$1,options,width))
+;})(map__11084,map__11084__$1,options,width))
 });
 fipp.engine.pprint_document = (function fipp$engine$pprint_document(document,options){
-var options_11056__$1 = cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"width","width",-384071477),(70)], null),options);
-cljs.core.run_BANG_.call(null,cljs.core.print,cljs.core.eduction.call(null,fipp.engine.annotate_rights,fipp.engine.annotate_begins.call(null,options_11056__$1),fipp.engine.format_nodes.call(null,options_11056__$1),fipp.engine.serialize.call(null,document)));
+var options_11092__$1 = cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"width","width",-384071477),(70)], null),options);
+cljs.core.run_BANG_.call(null,cljs.core.print,cljs.core.eduction.call(null,fipp.engine.annotate_rights,fipp.engine.annotate_begins.call(null,options_11092__$1),fipp.engine.format_nodes.call(null,options_11092__$1),fipp.engine.serialize.call(null,document)));
 
 return cljs.core.println.call(null);
 });

@@ -191,6 +191,8 @@ return (new titanoboa.exp.Expression(new cljs.core.Keyword(null,"value","value",
 });
 
 titanoboa.exp.read_expression = (function titanoboa$exp$read_expression(expr){
+cljs.core.println.call(null,[cljs.core.str("reading expr "),cljs.core.str(expr),cljs.core.str(" "),cljs.core.str(typeof expr === 'string')].join(''));
+
 if(typeof expr === 'string'){
 return (new titanoboa.exp.Expression(expr,null,null,null,null));
 } else {
@@ -201,6 +203,8 @@ return (new titanoboa.exp.Expression(v,t,null,null,null));
 }
 });
 titanoboa.exp.read_expression_edn = (function titanoboa$exp$read_expression_edn(expr){
+cljs.core.println.call(null,[cljs.core.str("reading edn expr "),cljs.core.str(expr),cljs.core.str(" "),cljs.core.str(typeof expr === 'string'),cljs.core.str(" "),cljs.core.str(cljs.core.map_QMARK_.call(null,expr))].join(''));
+
 if(typeof expr === 'string'){
 return (new titanoboa.exp.Expression(expr,null,null,null,null));
 } else {
@@ -216,9 +220,11 @@ return (new titanoboa.exp.Expression(v,t,null,null,null));
 }
 });
 titanoboa.exp.transit_write_handler = cognitect.transit.write_handler.call(null,cljs.core.constantly.call(null,"titanoboa.exp.Expression"),(function (v){
+cljs.core.println.call(null,[cljs.core.str("write-handler invoked... value is "),cljs.core.str(v)].join(''));
+
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(v),new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(v)], null);
 }));
 titanoboa.exp.transit_read_handler = cognitect.transit.read_handler.call(null,(function (p1__7309_SHARP_){
 return titanoboa.exp.read_expression.call(null,p1__7309_SHARP_);
 }));
-titanoboa.exp.edn_reader_map = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Symbol("titanoboa.exp","Expression","titanoboa.exp/Expression",-989257386,null),new cljs.core.Var(function(){return titanoboa.exp.read_expression_edn;},new cljs.core.Symbol("titanoboa.exp","read-expression-edn","titanoboa.exp/read-expression-edn",-2009873136,null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",441598760),new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"file","file",-1269645878),new cljs.core.Keyword(null,"end-column","end-column",1425389514),new cljs.core.Keyword(null,"column","column",2078222095),new cljs.core.Keyword(null,"line","line",212345235),new cljs.core.Keyword(null,"end-line","end-line",1837326455),new cljs.core.Keyword(null,"arglists","arglists",1661989754),new cljs.core.Keyword(null,"doc","doc",1913296891),new cljs.core.Keyword(null,"test","test",577538877)],[new cljs.core.Symbol(null,"titanoboa.exp","titanoboa.exp",754517708,null),new cljs.core.Symbol(null,"read-expression-edn","read-expression-edn",-2109340560,null),"src/cljs/titanoboa/exp.cljs",26,null,null,11,cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"expr","expr",-1908713478,null)], null)),null,(cljs.core.truth_(titanoboa.exp.read_expression_edn)?titanoboa.exp.read_expression_edn.cljs$lang$test:null)]))], null);
+titanoboa.exp.edn_reader_map = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Symbol("titanoboa.exp","Expression","titanoboa.exp/Expression",-989257386,null),new cljs.core.Var(function(){return titanoboa.exp.read_expression_edn;},new cljs.core.Symbol("titanoboa.exp","read-expression-edn","titanoboa.exp/read-expression-edn",-2009873136,null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",441598760),new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"file","file",-1269645878),new cljs.core.Keyword(null,"end-column","end-column",1425389514),new cljs.core.Keyword(null,"column","column",2078222095),new cljs.core.Keyword(null,"line","line",212345235),new cljs.core.Keyword(null,"end-line","end-line",1837326455),new cljs.core.Keyword(null,"arglists","arglists",1661989754),new cljs.core.Keyword(null,"doc","doc",1913296891),new cljs.core.Keyword(null,"test","test",577538877)],[new cljs.core.Symbol(null,"titanoboa.exp","titanoboa.exp",754517708,null),new cljs.core.Symbol(null,"read-expression-edn","read-expression-edn",-2109340560,null),"src/cljs/titanoboa/exp.cljs",26,null,null,12,cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"expr","expr",-1908713478,null)], null)),null,(cljs.core.truth_(titanoboa.exp.read_expression_edn)?titanoboa.exp.read_expression_edn.cljs$lang$test:null)]))], null);

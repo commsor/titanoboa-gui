@@ -23,7 +23,7 @@ html, body {
 }
 
 .step-icon-inactive {
-  fill: #bbb;
+  fill: #989898;
   stroke: none;
   stroke-width: 0px;
 }
@@ -203,6 +203,7 @@ width: 0px;
     margin: 15px 0px 10px 0px;
     max-height: 32px;
     min-width: 400px;
+    width: 100%;
 }
 
 .graph-buttons {
@@ -370,6 +371,19 @@ background-color: #607d8b;}
 .label-keyword {
 background-color: #8c7b93;}
 
+.vert-range {
+overflow: hidden;
+width: 150px;
+right: 65px;
+ height: 100px;
+ position: relative;
+ margin-top: 25px;
+ margin-bottom: 25px;
+ outline: 0;
+ outline-width: 0;
+ transform: rotate(270deg);
+ -moz-transform: rotate(270deg); /*do same for other browsers if required*/
+}
 
 /*
 .modal-body{
