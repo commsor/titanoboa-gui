@@ -45,7 +45,7 @@ return cljs.core.reset_BANG_.call(null,titanoboa.designer.job_def_revision_list,
 }));
 
 return titanoboa.api.get_step_types.call(null,(function (p1__10398_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.designer.step_types,cljs.core.concat.call(null,titanoboa.designer.custom_step_type,titanoboa.designer.join_step_type,p1__10398_SHARP_));
+return cljs.core.reset_BANG_.call(null,titanoboa.designer.step_types,cljs.core.concat.call(null,titanoboa.designer.custom_step_type,titanoboa.designer.join_step_type,cljs.core.sort_by.call(null,new cljs.core.Keyword(null,"type","type",1174270348),p1__10398_SHARP_)));
 }));
 });
 if(typeof titanoboa.designer.app_state !== 'undefined'){
