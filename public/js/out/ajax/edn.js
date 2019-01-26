@@ -8,47 +8,6 @@ ajax.edn.edn_read = (function ajax$edn$edn_read(xhrio){
 return cljs.reader.read_string.call(null,ajax.protocols._body.call(null,xhrio));
 });
 ajax.edn.edn_response_format = (function ajax$edn$edn_response_format(){
-var args11807 = [];
-var len__6047__auto___11810 = arguments.length;
-var i__6048__auto___11811 = (0);
-while(true){
-if((i__6048__auto___11811 < len__6047__auto___11810)){
-args11807.push((arguments[i__6048__auto___11811]));
-
-var G__11812 = (i__6048__auto___11811 + (1));
-i__6048__auto___11811 = G__11812;
-continue;
-} else {
-}
-break;
-}
-
-var G__11809 = args11807.length;
-switch (G__11809) {
-case 0:
-return ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$0();
-
-break;
-case 1:
-return ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
-
-break;
-default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args11807.length)].join('')));
-
-}
-});
-
-ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$0 = (function (){
-return ajax.core.map__GT_ResponseFormat.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"read","read",1140058661),ajax.edn.edn_read,new cljs.core.Keyword(null,"description","description",-1428560544),"EDN",new cljs.core.Keyword(null,"content-type","content-type",-508222634),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["application/edn"], null)], null));
-});
-
-ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$1 = (function (_){
-return ajax.edn.edn_response_format.call(null);
-});
-
-ajax.edn.edn_response_format.cljs$lang$maxFixedArity = 1;
-ajax.edn.edn_request_format = (function ajax$edn$edn_request_format(){
 var args11814 = [];
 var len__6047__auto___11817 = arguments.length;
 var i__6048__auto___11818 = (0);
@@ -67,6 +26,47 @@ break;
 var G__11816 = args11814.length;
 switch (G__11816) {
 case 0:
+return ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$0();
+
+break;
+case 1:
+return ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
+
+break;
+default:
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args11814.length)].join('')));
+
+}
+});
+
+ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$0 = (function (){
+return ajax.core.map__GT_ResponseFormat.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"read","read",1140058661),ajax.edn.edn_read,new cljs.core.Keyword(null,"description","description",-1428560544),"EDN",new cljs.core.Keyword(null,"content-type","content-type",-508222634),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["application/edn"], null)], null));
+});
+
+ajax.edn.edn_response_format.cljs$core$IFn$_invoke$arity$1 = (function (_){
+return ajax.edn.edn_response_format.call(null);
+});
+
+ajax.edn.edn_response_format.cljs$lang$maxFixedArity = 1;
+ajax.edn.edn_request_format = (function ajax$edn$edn_request_format(){
+var args11821 = [];
+var len__6047__auto___11824 = arguments.length;
+var i__6048__auto___11825 = (0);
+while(true){
+if((i__6048__auto___11825 < len__6047__auto___11824)){
+args11821.push((arguments[i__6048__auto___11825]));
+
+var G__11826 = (i__6048__auto___11825 + (1));
+i__6048__auto___11825 = G__11826;
+continue;
+} else {
+}
+break;
+}
+
+var G__11823 = args11821.length;
+switch (G__11823) {
+case 0:
 return ajax.edn.edn_request_format.cljs$core$IFn$_invoke$arity$0();
 
 break;
@@ -75,7 +75,7 @@ return ajax.edn.edn_request_format.cljs$core$IFn$_invoke$arity$1((arguments[(0)]
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args11814.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args11821.length)].join('')));
 
 }
 });
