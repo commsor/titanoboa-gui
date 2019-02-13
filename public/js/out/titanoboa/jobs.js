@@ -285,6 +285,32 @@ return titanoboa.designer.jquery.call(null,"#jobs-start-job-modal-dialog").dragg
 });})(temp_props_atom,editing_key,revision,selected_system,job_name))
 ], null));
 });
+titanoboa.jobs.exception_details_at = (function titanoboa$jobs$exception_details_at(p__10988){
+var vec__10990 = p__10988;
+var clazz = cljs.core.nth.call(null,vec__10990,(0),null);
+var method = cljs.core.nth.call(null,vec__10990,(1),null);
+var file = cljs.core.nth.call(null,vec__10990,(2),null);
+var line = cljs.core.nth.call(null,vec__10990,(3),null);
+return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding-left","padding-left",-1180879053),"50px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-info","span.label.label-info",-1377012770),[cljs.core.str(clazz),cljs.core.str(" ")].join('')], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-default","span.label.label-default",-277664003),[cljs.core.str(method),cljs.core.str(" ")].join('')], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-info","span.label.label-info",-1377012770),file], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-default","span.label.label-default",-277664003),[cljs.core.str(" line: "),cljs.core.str(line)].join('')], null)], null);
+});
+titanoboa.jobs.exception_details_via = (function titanoboa$jobs$exception_details_via(p__10991){
+var map__10994 = p__10991;
+var map__10994__$1 = ((((!((map__10994 == null)))?((((map__10994.cljs$lang$protocol_mask$partition0$ & (64))) || (map__10994.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__10994):map__10994);
+var via = map__10994__$1;
+var type = cljs.core.get.call(null,map__10994__$1,new cljs.core.Keyword(null,"type","type",1174270348));
+var message = cljs.core.get.call(null,map__10994__$1,new cljs.core.Keyword(null,"message","message",-406056002));
+var at = cljs.core.get.call(null,map__10994__$1,new cljs.core.Keyword(null,"at","at",1476951349));
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-warning","span.label.label-warning",-681742177),[cljs.core.str(type)].join('')], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding-left","padding-left",-1180879053),"10px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),message], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.jobs.exception_details_at,at], null)], null);
+});
+titanoboa.jobs.exception_details = (function titanoboa$jobs$exception_details(p__10996){
+var map__10999 = p__10996;
+var map__10999__$1 = ((((!((map__10999 == null)))?((((map__10999.cljs$lang$protocol_mask$partition0$ & (64))) || (map__10999.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__10999):map__10999);
+var exception_map = map__10999__$1;
+var cause = cljs.core.get.call(null,map__10999__$1,new cljs.core.Keyword(null,"cause","cause",231901252));
+var via = cljs.core.get.call(null,map__10999__$1,new cljs.core.Keyword(null,"via","via",-1904457336));
+var trace = cljs.core.get.call(null,map__10999__$1,new cljs.core.Keyword(null,"trace","trace",-1082747415));
+return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-danger","span.label.label-danger",-1648913628),"Exception"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-primary","span.label.label-primary",120832457),"cause:"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"padding-left","padding-left",-1180879053),"10px",new cljs.core.Keyword(null,"color","color",1011675173),"red"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),cause], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.sequence.call(null,cljs.core.map.call(null,titanoboa.jobs.exception_details_via,via))], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-primary","span.label.label-primary",120832457),"stack trace:"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.sequence.call(null,cljs.core.map.call(null,titanoboa.jobs.exception_details_at,trace))], null)], null);
+});
 titanoboa.jobs.job_details = (function titanoboa$jobs$job_details(opened_job_id){
 var tab_selected = reagent.core.atom.call(null,new cljs.core.Keyword(null,"visualization","visualization",-679699210));
 return ((function (tab_selected){
@@ -292,8 +318,8 @@ return (function (opened_job_id__$1){
 var graph_cursor = reagent.core.cursor.call(null,titanoboa.jobs.graph_view,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [opened_job_id__$1], null));
 var jd_cursor = cljs.core.atom.call(null,titanoboa.jobs.get_opened_jd.call(null));
 var job_cursor = titanoboa.jobs.get_opened_job.call(null);
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.col","div.jobs-tab.col",177565585),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.form-horizontal","div.form-horizontal",-2097357544),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"margin","margin",-995903681),"5px 0px 0px 0px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.control-label.col-md-2","label.control-label.col-md-2",-971481496),"UUID: "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.col-md-12.form-control-static","div.col-md-12.form-control-static",557076171),opened_job_id__$1], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.control-label.col-md-2","label.control-label.col-md-2",-971481496),"Status: "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.col-md-8.form-control-static","div.col-md-8.form-control-static",778155070),titanoboa.jobs.status_label.call(null,new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,job_cursor)))], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.jobs-details.with-vtabs","div.jobs-tab.jobs-details.with-vtabs",-817944871),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.content","div.content",-298042649),(function (){var G__10989 = (((cljs.core.deref.call(null,tab_selected) instanceof cljs.core.Keyword))?cljs.core.deref.call(null,tab_selected).fqn:null);
-switch (G__10989) {
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.col","div.jobs-tab.col",177565585),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.form-horizontal","div.form-horizontal",-2097357544),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"margin","margin",-995903681),"5px 0px 0px 0px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.control-label.col-md-2","label.control-label.col-md-2",-971481496),"UUID: "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.col-md-12.form-control-static","div.col-md-12.form-control-static",557076171),opened_job_id__$1], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.control-label.col-md-2","label.control-label.col-md-2",-971481496),"Status: "], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.col-md-8.form-control-static","div.col-md-8.form-control-static",778155070),titanoboa.jobs.status_label.call(null,new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,job_cursor)))], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.jobs-details.with-vtabs","div.jobs-tab.jobs-details.with-vtabs",-817944871),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.content","div.content",-298042649),(function (){var G__11002 = (((cljs.core.deref.call(null,tab_selected) instanceof cljs.core.Keyword))?cljs.core.deref.call(null,tab_selected).fqn:null);
+switch (G__11002) {
 case "visualization":
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab","div.jobs-tab",-149550037),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"margin","margin",-995903681),"10px 5px 0px 0px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.designer.job_graph_visualization,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"graph-cursor","graph-cursor",-662080825),graph_cursor,new cljs.core.Keyword(null,"jd-cursor","jd-cursor",-311232011),jd_cursor,new cljs.core.Keyword(null,"history-map","history-map",1885369238),titanoboa.util.keyify.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"history","history",-247395220).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,job_cursor))),new cljs.core.Keyword(null,"job-metadata","job-metadata",-1874941597),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"start","start",-355208981),new cljs.core.Keyword(null,"start","start",-355208981).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,job_cursor))], null)], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.designer.button_bar_readonly,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"graph-cursor","graph-cursor",-662080825),graph_cursor], null)], null)], null);
 
@@ -303,11 +329,11 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 
 break;
 case "logs":
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table.table.table-striped.table-hover","table.table.table-striped.table-hover",726875574),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),cljs.core.sequence.call(null,cljs.core.map.call(null,((function (G__10989,graph_cursor,jd_cursor,job_cursor,tab_selected){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table.table.table-striped.table-hover","table.table.table-striped.table-hover",726875574),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),cljs.core.sequence.call(null,cljs.core.map.call(null,((function (G__11002,graph_cursor,jd_cursor,job_cursor,tab_selected){
 return (function (i){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),(cljs.core.truth_(new cljs.core.Keyword(null,"message","message",-406056002).cljs$core$IFn$_invoke$arity$1(i))?new cljs.core.Keyword(null,"message","message",-406056002).cljs$core$IFn$_invoke$arity$1(i):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),new cljs.core.Keyword(null,"exception","exception",-335277064).cljs$core$IFn$_invoke$arity$1(i)], null))], null)], null);
-});})(G__10989,graph_cursor,jd_cursor,job_cursor,tab_selected))
-,cljs.core.filter.call(null,((function (G__10989,graph_cursor,jd_cursor,job_cursor,tab_selected){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),(cljs.core.truth_(new cljs.core.Keyword(null,"message","message",-406056002).cljs$core$IFn$_invoke$arity$1(i))?new cljs.core.Keyword(null,"message","message",-406056002).cljs$core$IFn$_invoke$arity$1(i):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.jobs.exception_details,new cljs.core.Keyword(null,"exception","exception",-335277064).cljs$core$IFn$_invoke$arity$1(i)], null))], null)], null);
+});})(G__11002,graph_cursor,jd_cursor,job_cursor,tab_selected))
+,cljs.core.filter.call(null,((function (G__11002,graph_cursor,jd_cursor,job_cursor,tab_selected){
 return (function (i){
 var or__5008__auto__ = new cljs.core.Keyword(null,"message","message",-406056002).cljs$core$IFn$_invoke$arity$1(i);
 if(cljs.core.truth_(or__5008__auto__)){
@@ -315,7 +341,7 @@ return or__5008__auto__;
 } else {
 return new cljs.core.Keyword(null,"exception","exception",-335277064).cljs$core$IFn$_invoke$arity$1(i);
 }
-});})(G__10989,graph_cursor,jd_cursor,job_cursor,tab_selected))
+});})(G__11002,graph_cursor,jd_cursor,job_cursor,tab_selected))
 ,new cljs.core.Keyword(null,"history","history",-247395220).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,job_cursor)))))], null)], null)], null);
 
 break;
@@ -340,33 +366,33 @@ return cljs.core.reset_BANG_.call(null,tab_selected,new cljs.core.Keyword(null,"
 ;})(tab_selected))
 });
 titanoboa.jobs.add_subjobs_as_steps = (function titanoboa$jobs$add_subjobs_as_steps(steps,reduce_steps){
-return cljs.core.merge.call(null,steps,titanoboa.util.keyify.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.mapcat.call(null,cljs.core.identity,cljs.core.mapv.call(null,(function (p__11000){
-var vec__11001 = p__11000;
-var reduce_step_id = cljs.core.nth.call(null,vec__11001,(0),null);
-var map__11002 = cljs.core.nth.call(null,vec__11001,(1),null);
-var map__11002__$1 = ((((!((map__11002 == null)))?((((map__11002.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11002.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11002):map__11002);
-var map_step_id = cljs.core.get.call(null,map__11002__$1,new cljs.core.Keyword(null,"map-step-id","map-step-id",1338103340));
-var map_step_id_tuples = cljs.core.get.call(null,map__11002__$1,new cljs.core.Keyword(null,"map-step-id-tuples","map-step-id-tuples",1877757858));
+return cljs.core.merge.call(null,steps,titanoboa.util.keyify.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.mapcat.call(null,cljs.core.identity,cljs.core.mapv.call(null,(function (p__11013){
+var vec__11014 = p__11013;
+var reduce_step_id = cljs.core.nth.call(null,vec__11014,(0),null);
+var map__11015 = cljs.core.nth.call(null,vec__11014,(1),null);
+var map__11015__$1 = ((((!((map__11015 == null)))?((((map__11015.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11015.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11015):map__11015);
+var map_step_id = cljs.core.get.call(null,map__11015__$1,new cljs.core.Keyword(null,"map-step-id","map-step-id",1338103340));
+var map_step_id_tuples = cljs.core.get.call(null,map__11015__$1,new cljs.core.Keyword(null,"map-step-id-tuples","map-step-id-tuples",1877757858));
 var map_step = cljs.core.get.call(null,steps,map_step_id);
-var updated_map_step = cljs.core.update_in.call(null,map_step,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"next","next",-117701485)], null),((function (map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples){
-return (function (p1__10991_SHARP_){
-return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.concat.call(null,p1__10991_SHARP_,cljs.core.mapv.call(null,((function (map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples){
-return (function (p__11004){
-var vec__11005 = p__11004;
-var idx = cljs.core.nth.call(null,vec__11005,(0),null);
-var uuid = cljs.core.nth.call(null,vec__11005,(1),null);
+var updated_map_step = cljs.core.update_in.call(null,map_step,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"next","next",-117701485)], null),((function (map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples){
+return (function (p1__11004_SHARP_){
+return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.concat.call(null,p1__11004_SHARP_,cljs.core.mapv.call(null,((function (map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples){
+return (function (p__11017){
+var vec__11018 = p__11017;
+var idx = cljs.core.nth.call(null,vec__11018,(0),null);
+var uuid = cljs.core.nth.call(null,vec__11018,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["*",uuid], null);
-});})(map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples))
+});})(map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples))
 ,map_step_id_tuples)));
-});})(map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples))
+});})(map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples))
 );
-var new_job_steps = cljs.core.mapv.call(null,((function (map_step,updated_map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples){
-return (function (p__11006){
-var vec__11007 = p__11006;
-var idx = cljs.core.nth.call(null,vec__11007,(0),null);
-var uuid = cljs.core.nth.call(null,vec__11007,(1),null);
+var new_job_steps = cljs.core.mapv.call(null,((function (map_step,updated_map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples){
+return (function (p__11019){
+var vec__11020 = p__11019;
+var idx = cljs.core.nth.call(null,vec__11020,(0),null);
+var uuid = cljs.core.nth.call(null,vec__11020,(1),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"id","id",-1388402092),uuid,new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"job","job",850873087),new cljs.core.Keyword(null,"next","next",-117701485),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["*",reduce_step_id], null)], null)], null);
-});})(map_step,updated_map_step,vec__11001,reduce_step_id,map__11002,map__11002__$1,map_step_id,map_step_id_tuples))
+});})(map_step,updated_map_step,vec__11014,reduce_step_id,map__11015,map__11015__$1,map_step_id,map_step_id_tuples))
 ,map_step_id_tuples);
 return cljs.core.conj.call(null,new_job_steps,updated_map_step);
 }),reduce_steps)))));
@@ -428,9 +454,9 @@ return (function (){
 return cljs.core.reset_BANG_.call(null,titanoboa.jobs.active_tab,new cljs.core.Keyword(null,"archived","archived",1018596768));
 });})(sys_selected))
 ], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),"Archived"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),"active",new cljs.core.Keyword(null,"role","role",-736691072),"presentation",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"float","float",-1732389368),"right"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.jobs.run_job_btn,cljs.core.deref.call(null,titanoboa.jobs.available_job_defs_atom)], null)], null)], null),((cljs.core._EQ_.call(null,cljs.core.deref.call(null,titanoboa.jobs.active_tab),new cljs.core.Keyword(null,"recent","recent",449517715)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.jobs-listings","div.jobs-tab.jobs-listings",259587531),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.form-group.row","div.form-group.row",448197899),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label.col-sm-3.col-form-label","label.col-sm-3.col-form-label",480007261),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.zmdi.zmdi-puzzle-piece","span.zmdi.zmdi-puzzle-piece",-154967044),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),"18px"], null)], null)," "], null)," System:"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.col-sm-18","div.col-sm-18",-1326919809),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.designer.select_picker,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"data-live-search","data-live-search",-181231710),new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),new cljs.core.Keyword(null,"autoComplete","autoComplete",-219243415),new cljs.core.Keyword(null,"value","value",305978217),new cljs.core.Keyword(null,"val","val",128701612),new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"title","title",636505583),new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"on-change","on-change",-732046149)],[true,"recent-jobs-system-selector","Select system","off",[cljs.core.str(cljs.core.deref.call(null,sys_selected))].join(''),[cljs.core.str(cljs.core.deref.call(null,sys_selected))].join(''),"text","Select system","recent-jobs-system-selector","form-control",((function (sys_selected){
-return (function (p1__11008_SHARP_){
-if(cljs.core.not_EQ_.call(null,p1__11008_SHARP_.target.value,"")){
-var sys = titanoboa.util.s__GT_key.call(null,p1__11008_SHARP_.target.value);
+return (function (p1__11021_SHARP_){
+if(cljs.core.not_EQ_.call(null,p1__11021_SHARP_.target.value,"")){
+var sys = titanoboa.util.s__GT_key.call(null,p1__11021_SHARP_.target.value);
 return cljs.core.reset_BANG_.call(null,sys_selected,sys);
 } else {
 return null;
@@ -441,8 +467,8 @@ return (function (pg){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),((cljs.core._EQ_.call(null,cljs.core.quot.call(null,new cljs.core.Keyword(null,"offset","offset",296498311).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.jobs.archived_jobs_list)),titanoboa.jobs.archive_page_size),pg))?"active":null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"href","href",-793805698),"#",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((typeof pg === 'number')?((function (sys_selected){
 return (function (e){
 return titanoboa.api.list_archived_jobs.call(null,titanoboa.jobs.archive_page_size,(pg * titanoboa.jobs.archive_page_size),cljs.core.deref.call(null,titanoboa.jobs.sort_order),((function (sys_selected){
-return (function (p1__11009_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.jobs.archived_jobs_list,p1__11009_SHARP_);
+return (function (p1__11022_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.jobs.archived_jobs_list,p1__11022_SHARP_);
 });})(sys_selected))
 ,((function (sys_selected){
 return (function (){
@@ -459,34 +485,34 @@ return cljs.core.List.EMPTY;
 )], null),((typeof pg === 'number')?[cljs.core.str((pg + (1)))].join(''):pg)], null)], null);
 });})(sys_selected))
 ,titanoboa.jobs.pagination_range.call(null,cljs.core.quot.call(null,new cljs.core.Keyword(null,"offset","offset",296498311).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.jobs.archived_jobs_list)),titanoboa.jobs.archive_page_size),Math.ceil((new cljs.core.Keyword(null,"totalcount","totalcount",-227730219).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.jobs.archived_jobs_list)) / new cljs.core.Keyword(null,"limit","limit",-1355822363).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.jobs.archived_jobs_list)))),(5))))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel.panel-default","div.panel.panel-default",-1039051133),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"overflow-y","overflow-y",-1436589285),"scroll",new cljs.core.Keyword(null,"height","height",1025178622),(cljs.core.deref.call(null,titanoboa.designer.win_height_atom) - (195))], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table.table.table-striped.table-hover","table.table.table-striped.table-hover",726875574),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Job ID"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Workflow"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Status"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Started"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Duration"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Last Step"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Step Status"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),"Action"], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),cljs.core.sequence.call(null,titanoboa.jobs.render_rows_trdcr.call(null,titanoboa.jobs.load_archived_job),new cljs.core.Keyword(null,"values","values",372645556).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.jobs.archived_jobs_list)))], null)], null)], null)], null)], null))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.col.jobs-details","div.jobs-tab.col.jobs-details",-62639376),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.nav.nav-tabs","ul.nav.nav-tabs",1865557319),cljs.core.doall.call(null,cljs.core.map.call(null,((function (sys_selected){
-return (function (p__11012){
-var vec__11013 = p__11012;
-var k = cljs.core.nth.call(null,vec__11013,(0),null);
-var v = cljs.core.nth.call(null,vec__11013,(1),null);
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),((cljs.core._EQ_.call(null,k,cljs.core.deref.call(null,titanoboa.jobs.opened_job)))?"active":null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (vec__11013,k,v,sys_selected){
+return (function (p__11025){
+var vec__11026 = p__11025;
+var k = cljs.core.nth.call(null,vec__11026,(0),null);
+var v = cljs.core.nth.call(null,vec__11026,(1),null);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),((cljs.core._EQ_.call(null,k,cljs.core.deref.call(null,titanoboa.jobs.opened_job)))?"active":null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (vec__11026,k,v,sys_selected){
 return (function (){
 return cljs.core.reset_BANG_.call(null,titanoboa.jobs.opened_job,k);
-});})(vec__11013,k,v,sys_selected))
-], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),titanoboa.jobs.shorten_uuid.call(null,k)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),cljs.core.get_in.call(null,v,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"job-def","job-def",-7819356),new cljs.core.Keyword(null,"name","name",1843675177)], null))], null),((cljs.core._EQ_.call(null,k,cljs.core.deref.call(null,titanoboa.jobs.opened_job)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),"close",new cljs.core.Keyword(null,"type","type",1174270348),"button",new cljs.core.Keyword(null,"title","title",636505583),"Close",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (vec__11013,k,v,sys_selected){
+});})(vec__11026,k,v,sys_selected))
+], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),titanoboa.jobs.shorten_uuid.call(null,k)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),cljs.core.get_in.call(null,v,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"job-def","job-def",-7819356),new cljs.core.Keyword(null,"name","name",1843675177)], null))], null),((cljs.core._EQ_.call(null,k,cljs.core.deref.call(null,titanoboa.jobs.opened_job)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),"close",new cljs.core.Keyword(null,"type","type",1174270348),"button",new cljs.core.Keyword(null,"title","title",636505583),"Close",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (vec__11026,k,v,sys_selected){
 return (function (){
 return titanoboa.designer.stop_force_BANG_.call(null,titanoboa.jobs.graph_view,k).call(null,cljs.core.reset_BANG_.call(null,titanoboa.jobs.opened_job,null),cljs.core.swap_BANG_.call(null,titanoboa.jobs.opened_job_tabs,cljs.core.dissoc,k),cljs.core.reset_BANG_.call(null,titanoboa.jobs.opened_job,cljs.core.first.call(null,cljs.core.keys.call(null,cljs.core.deref.call(null,titanoboa.jobs.opened_job_tabs)))),((cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"source","source",-433931539).cljs$core$IFn$_invoke$arity$1(v),new cljs.core.Keyword(null,"archived","archived",1018596768)))?cljs.core.swap_BANG_.call(null,titanoboa.jobs.archived_jobs_loaded,cljs.core.dissoc,k):null),cljs.core.swap_BANG_.call(null,titanoboa.jobs.graph_view,cljs.core.dissoc,k));
-});})(vec__11013,k,v,sys_selected))
+});})(vec__11026,k,v,sys_selected))
 ], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-remove",new cljs.core.Keyword(null,"aria-hidden","aria-hidden",399337029),"true"], null)], null)], null):null)], null)], null);
 });})(sys_selected))
 ,cljs.core.deref.call(null,titanoboa.jobs.opened_job_tabs)))], null),(cljs.core.truth_(cljs.core.deref.call(null,titanoboa.jobs.opened_job))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.jobs.job_details,cljs.core.deref.call(null,titanoboa.jobs.opened_job)], null):null)], null)], null);
 });
 ;})(sys_selected))
 });
-titanoboa.api.list_running_jobs.call(null,(function (p1__11014_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.jobs.jobs_snapshot,cljs.core.merge_with.call(null,cljs.core.merge,titanoboa.jobs.get_opened_snapshots.call(null),p1__11014_SHARP_));
+titanoboa.api.list_running_jobs.call(null,(function (p1__11027_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.jobs.jobs_snapshot,cljs.core.merge_with.call(null,cljs.core.merge,titanoboa.jobs.get_opened_snapshots.call(null),p1__11027_SHARP_));
 }));
-titanoboa.api.list_archived_jobs.call(null,titanoboa.jobs.archive_page_size,(0),cljs.core.deref.call(null,titanoboa.jobs.sort_order),(function (p1__11015_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.jobs.archived_jobs_list,p1__11015_SHARP_);
+titanoboa.api.list_archived_jobs.call(null,titanoboa.jobs.archive_page_size,(0),cljs.core.deref.call(null,titanoboa.jobs.sort_order),(function (p1__11028_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.jobs.archived_jobs_list,p1__11028_SHARP_);
 }),(function (){
 cljs.core.reset_BANG_.call(null,titanoboa.jobs.archive_disabled_QMARK_,true);
 
 return cljs.core.reset_BANG_.call(null,titanoboa.jobs.active_tab,new cljs.core.Keyword(null,"recent","recent",449517715));
 }));
-titanoboa.api.list_all_defs.call(null,(function (p1__11016_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.jobs.available_job_defs_atom,p1__11016_SHARP_);
+titanoboa.api.list_all_defs.call(null,(function (p1__11029_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.jobs.available_job_defs_atom,p1__11029_SHARP_);
 }));
