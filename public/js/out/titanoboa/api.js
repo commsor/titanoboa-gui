@@ -12,6 +12,9 @@ if(typeof titanoboa.api.cluster_enabled_QMARK_ !== 'undefined'){
 } else {
 titanoboa.api.cluster_enabled_QMARK_ = cljs.core.atom.call(null,false);
 }
+titanoboa.api.err_message = (function titanoboa$api$err_message(m){
+return titanoboa.api.jquery.notify(cljs.core.clj__GT_js.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"title","title",636505583),"<strong>Error:</strong><br/>",new cljs.core.Keyword(null,"message","message",-406056002),m], null)),cljs.core.clj__GT_js.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"type","type",1174270348),"danger"], null)));
+});
 titanoboa.api.generic_error_handler = (function titanoboa$api$generic_error_handler(s){
 var G__7752 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(s);
 switch (G__7752) {
@@ -20,11 +23,11 @@ return titanoboa.api.jquery.call(null,"#login-modal").modal();
 
 break;
 case (409):
-return alert([cljs.core.str("Data you are trying to save were changed by other user in the meantime!")].join(''));
+return titanoboa.api.err_message.call(null,[cljs.core.str("Data you are trying to save were changed by other user in the meantime!")].join(''));
 
 break;
 default:
-alert([cljs.core.str("There was an error while communicating with server: "),cljs.core.str(new cljs.core.Keyword(null,"status-text","status-text",-1834235478).cljs$core$IFn$_invoke$arity$1(s))].join(''));
+titanoboa.api.err_message.call(null,[cljs.core.str("There was an error while communicating with server: <br/>"),cljs.core.str(new cljs.core.Keyword(null,"status-text","status-text",-1834235478).cljs$core$IFn$_invoke$arity$1(s))].join(''));
 
 return console.log("ERROR: ",cljs.core.clj__GT_js.call(null,s));
 
