@@ -443,7 +443,13 @@ return cljs.core.not.call(null,titanoboa.jobs.running_QMARK_.call(null,j));
 })),titanoboa.jobs.render_rows_trdcr.call(null,cljs.core.partial.call(null,titanoboa.jobs.open_job,system)));
 });
 titanoboa.jobs.jobs_tab = (function titanoboa$jobs$jobs_tab(){
-var sys_selected = reagent.core.atom.call(null,((cljs.core.contains_QMARK_.call(null,cljs.core.deref.call(null,titanoboa.jobs.jobs_snapshot),new cljs.core.Keyword(null,"core","core",-86019209)))?new cljs.core.Keyword(null,"core","core",-86019209):cljs.core.first.call(null,cljs.core.keys.call(null,cljs.core.deref.call(null,titanoboa.jobs.jobs_snapshot)))));
+var sys_selected = reagent.core.atom.call(null,((cljs.core.contains_QMARK_.call(null,cljs.core.deref.call(null,titanoboa.jobs.jobs_snapshot),new cljs.core.Keyword(null,"core","core",-86019209)))?new cljs.core.Keyword(null,"core","core",-86019209):(function (){var or__5008__auto__ = cljs.core.first.call(null,cljs.core.keys.call(null,cljs.core.deref.call(null,titanoboa.jobs.jobs_snapshot)));
+if(cljs.core.truth_(or__5008__auto__)){
+return or__5008__auto__;
+} else {
+return new cljs.core.Keyword(null,"core","core",-86019209);
+}
+})()));
 return ((function (sys_selected){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.base-tab","div.jobs-tab.base-tab",1495315968),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.jobs-tab.col.left-pane","div.jobs-tab.col.left-pane",-1852891893),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.nav.nav-tabs","ul.nav.nav-tabs",1865557319),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),((cljs.core._EQ_.call(null,cljs.core.deref.call(null,titanoboa.jobs.active_tab),new cljs.core.Keyword(null,"recent","recent",449517715)))?"active":null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (sys_selected){
