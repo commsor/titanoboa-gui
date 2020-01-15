@@ -192,6 +192,9 @@ width: 600px;
 width: 0px;
 }
 
+.job-visualization.out {
+width: 900px;
+}
 .graph-buttons-container > *{
     display: inline-block;
     vertical-align: top;
