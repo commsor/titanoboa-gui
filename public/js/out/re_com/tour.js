@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.28 {}
+// Compiled by ClojureScript 1.10.238 {}
 goog.provide('re_com.tour');
 goog.require('cljs.core');
 goog.require('reagent.core');
@@ -6,22 +6,22 @@ goog.require('re_com.box');
 goog.require('re_com.buttons');
 /**
  * Returns a map containing
- * - A reagent atom for each tour step controlling popover show/hide (boolean)
- * - A standard atom holding the current step (integer)
- * - A copy of the steps parameter passed in, to determine the order for prev/next functions
- * It sets the first step atom to true so that it will be initially shown
- * Sample return value:
- * {:steps [:step1 :step2 :step3]
- * :current-step (atom 0)
- * :step1 (reagent/atom true)
- * :step2 (reagent/atom false)
- * :step3 (reagent/atom false)}
+ *   - A reagent atom for each tour step controlling popover show/hide (boolean)
+ *   - A standard atom holding the current step (integer)
+ *   - A copy of the steps parameter passed in, to determine the order for prev/next functions
+ *   It sets the first step atom to true so that it will be initially shown
+ *   Sample return value:
+ *   {:steps [:step1 :step2 :step3]
+ *   :current-step (atom 0)
+ *   :step1 (reagent/atom true)
+ *   :step2 (reagent/atom false)
+ *   :step3 (reagent/atom false)}
  */
 re_com.tour.make_tour = (function re_com$tour$make_tour(tour_spec){
 var tour_map = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"current-step","current-step",-2023410137),cljs.core.atom.call(null,(0)),new cljs.core.Keyword(null,"steps","steps",-128433302),tour_spec], null);
 return cljs.core.reduce.call(null,((function (tour_map){
-return (function (p1__16267_SHARP_,p2__16268_SHARP_){
-return cljs.core.assoc.call(null,p1__16267_SHARP_,p2__16268_SHARP_,reagent.core.atom.call(null,false));
+return (function (p1__7034_SHARP_,p2__7035_SHARP_){
+return cljs.core.assoc.call(null,p1__7034_SHARP_,p2__7035_SHARP_,reagent.core.atom.call(null,false));
 });})(tour_map))
 ,tour_map,tour_spec);
 });
@@ -29,25 +29,25 @@ return cljs.core.assoc.call(null,p1__16267_SHARP_,p2__16268_SHARP_,reagent.core.
  * Resets all poover atoms to false
  */
 re_com.tour.initialise_tour = (function re_com$tour$initialise_tour(tour){
-return cljs.core.doall.call(null,(function (){var iter__5761__auto__ = (function re_com$tour$initialise_tour_$_iter__16273(s__16274){
+return cljs.core.doall.call(null,(function (){var iter__4292__auto__ = (function re_com$tour$initialise_tour_$_iter__7036(s__7037){
 return (new cljs.core.LazySeq(null,(function (){
-var s__16274__$1 = s__16274;
+var s__7037__$1 = s__7037;
 while(true){
-var temp__4425__auto__ = cljs.core.seq.call(null,s__16274__$1);
-if(temp__4425__auto__){
-var s__16274__$2 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__16274__$2)){
-var c__5759__auto__ = cljs.core.chunk_first.call(null,s__16274__$2);
-var size__5760__auto__ = cljs.core.count.call(null,c__5759__auto__);
-var b__16276 = cljs.core.chunk_buffer.call(null,size__5760__auto__);
-if((function (){var i__16275 = (0);
+var temp__5720__auto__ = cljs.core.seq.call(null,s__7037__$1);
+if(temp__5720__auto__){
+var s__7037__$2 = temp__5720__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__7037__$2)){
+var c__4290__auto__ = cljs.core.chunk_first.call(null,s__7037__$2);
+var size__4291__auto__ = cljs.core.count.call(null,c__4290__auto__);
+var b__7039 = cljs.core.chunk_buffer.call(null,size__4291__auto__);
+if((function (){var i__7038 = (0);
 while(true){
-if((i__16275 < size__5760__auto__)){
-var step = cljs.core._nth.call(null,c__5759__auto__,i__16275);
-cljs.core.chunk_append.call(null,b__16276,cljs.core.reset_BANG_.call(null,step.call(null,tour),false));
+if((i__7038 < size__4291__auto__)){
+var step = cljs.core._nth.call(null,c__4290__auto__,i__7038);
+cljs.core.chunk_append.call(null,b__7039,cljs.core.reset_BANG_.call(null,step.call(null,tour),false));
 
-var G__16277 = (i__16275 + (1));
-i__16275 = G__16277;
+var G__7040 = (i__7038 + (1));
+i__7038 = G__7040;
 continue;
 } else {
 return true;
@@ -55,13 +55,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__16276),re_com$tour$initialise_tour_$_iter__16273.call(null,cljs.core.chunk_rest.call(null,s__16274__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__7039),re_com$tour$initialise_tour_$_iter__7036.call(null,cljs.core.chunk_rest.call(null,s__7037__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__16276),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__7039),null);
 }
 } else {
-var step = cljs.core.first.call(null,s__16274__$2);
-return cljs.core.cons.call(null,cljs.core.reset_BANG_.call(null,step.call(null,tour),false),re_com$tour$initialise_tour_$_iter__16273.call(null,cljs.core.rest.call(null,s__16274__$2)));
+var step = cljs.core.first.call(null,s__7037__$2);
+return cljs.core.cons.call(null,cljs.core.reset_BANG_.call(null,step.call(null,tour),false),re_com$tour$initialise_tour_$_iter__7036.call(null,cljs.core.rest.call(null,s__7037__$2)));
 }
 } else {
 return null;
@@ -70,7 +70,7 @@ break;
 }
 }),null,null));
 });
-return iter__5761__auto__.call(null,new cljs.core.Keyword(null,"steps","steps",-128433302).cljs$core$IFn$_invoke$arity$1(tour));
+return iter__4292__auto__.call(null,new cljs.core.Keyword(null,"steps","steps",-128433302).cljs$core$IFn$_invoke$arity$1(tour));
 })());
 });
 /**
@@ -119,8 +119,8 @@ return null;
 });
 /**
  * Generate the hr and previous/next buttons markup.
- * If first button in tour, don't generate a Previous button.
- * If last button in tour, change Next button to a Finish button
+ *   If first button in tour, don't generate a Previous button.
+ *   If last button in tour, change Next button to a Finish button
  */
 re_com.tour.make_tour_nav = (function re_com$tour$make_tour_nav(tour){
 var on_first_button = cljs.core._EQ_.call(null,cljs.core.deref.call(null,new cljs.core.Keyword(null,"current-step","current-step",-2023410137).cljs$core$IFn$_invoke$arity$1(tour)),(0));

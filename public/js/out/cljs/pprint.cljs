@@ -7,7 +7,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns cljs.pprint
-  (:refer-clojure :exclude [deftype print println pr prn])
+  (:refer-clojure :exclude [deftype print println pr prn float?])
   (:require-macros
     [cljs.pprint :as m :refer [with-pretty-writer getf setf deftype
                                pprint-logical-block print-length-loop
@@ -611,7 +611,7 @@ beginning of aseq"
 ;; Variables that control the pretty printer
 ;;======================================================================
 
-;; *print-length*, *print-level* and *print-dup* are defined in cljs.core
+;; *print-length*, *print-level*, *print-namespace-maps* and *print-dup* are defined in cljs.core
 (def ^:dynamic
  ^{:doc "Bind to true if you want write to use pretty printing"}
  *print-pretty* true)
@@ -689,23 +689,25 @@ radix specifier is in the form #XXr where XX is the decimal value of *print-base
 
 (declare format-simple-number)
 
-(def ^{:private true} write-option-table
-  {;:array            *print-array*
-   :base             #'cljs.pprint/*print-base*,
-   ;;:case             *print-case*,
-   :circle           #'cljs.pprint/*print-circle*,
-   ;;:escape           *print-escape*,
-   ;;:gensym           *print-gensym*,
-   :length           #'cljs.core/*print-length*,
-   :level            #'cljs.core/*print-level*,
-   :lines            #'cljs.pprint/*print-lines*,
-   :miser-width      #'cljs.pprint/*print-miser-width*,
-   :dispatch         #'cljs.pprint/*print-pprint-dispatch*,
-   :pretty           #'cljs.pprint/*print-pretty*,
-   :radix            #'cljs.pprint/*print-radix*,
-   :readably         #'cljs.core/*print-readably*,
-   :right-margin     #'cljs.pprint/*print-right-margin*,
-   :suppress-namespaces #'cljs.pprint/*print-suppress-namespaces*})
+;; This map causes var metadata to be included in the compiled output, even
+;; in advanced compilation. See CLJS-1853 - António Monteiro
+;; (def ^{:private true} write-option-table
+;;   {;:array            *print-array*
+;;    :base             #'cljs.pprint/*print-base*,
+;;    ;;:case             *print-case*,
+;;    :circle           #'cljs.pprint/*print-circle*,
+;;    ;;:escape           *print-escape*,
+;;    ;;:gensym           *print-gensym*,
+;;    :length           #'cljs.core/*print-length*,
+;;    :level            #'cljs.core/*print-level*,
+;;    :lines            #'cljs.pprint/*print-lines*,
+;;    :miser-width      #'cljs.pprint/*print-miser-width*,
+;;    :dispatch         #'cljs.pprint/*print-pprint-dispatch*,
+;;    :pretty           #'cljs.pprint/*print-pretty*,
+;;    :radix            #'cljs.pprint/*print-radix*,
+;;    :readably         #'cljs.core/*print-readably*,
+;;    :right-margin     #'cljs.pprint/*print-right-margin*,
+;;    :suppress-namespaces #'cljs.pprint/*print-suppress-namespaces*})
 
 (defn- table-ize [t m]
   (apply hash-map (mapcat
@@ -804,7 +806,7 @@ The following keyword arguments can be passed with values:
             (binding [*out* base-writer]
               (pr object)))
           (if (true? optval)
-            (*print-fn* (str sb)))
+            (string-print (str sb)))
           (if (nil? optval)
             (str sb)))))))
 
@@ -813,7 +815,7 @@ The following keyword arguments can be passed with values:
    (let [sb (StringBuffer.)]
      (binding [*out* (StringBufferWriter. sb)]
        (pprint object *out*)
-       (*print-fn* (str sb)))))
+       (string-print (str sb)))))
   ([object writer]
    (with-pretty-writer writer
                        (binding [*print-pretty* true]
@@ -1418,7 +1420,7 @@ http://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm"
         e (if (and (pos? (count e)) (= (nth e 0) \+)) (subs e 1) e)]
     (if (empty? m2)
       ["0" 0]
-      [m2 (- (js/parseInt e) delta)])))
+      [m2 (- (js/parseInt e 10) delta)])))
 
 (defn- inc-s
   "Assumption: The input string consists of one or more decimal digits,
@@ -2475,7 +2477,7 @@ not a pretty writer (which keeps track of columns), this function always outputs
      (and (= (.-length p) 1) (contains? #{\v \V} (nth p 0))) :parameter-from-args
      (and (= (.-length p) 1) (= \# (nth p 0))) :remaining-arg-count
      (and (= (.-length p) 2) (= \' (nth p 0))) (nth p 1)
-     true (js/parseInt p))
+     true (js/parseInt p 10))
    offset])
 
 (def ^{:private true}
@@ -2734,7 +2736,7 @@ column number or pretty printing"
              (-flush wrapped-stream))))
        (cond
          (not stream) (str sb)
-         (true? stream) (*print-fn* (str sb))
+         (true? stream) (string-print (str sb))
          :else nil))))
   ([format args]
    (map-passing-context
@@ -2837,21 +2839,25 @@ column number or pretty printing"
 
 ;;; (def pprint-map (formatter-out "~<{~;~@{~<~w~^ ~_~w~:>~^, ~_~}~;}~:>"))
 (defn- pprint-map [amap]
-  (pprint-logical-block :prefix "{" :suffix "}"
-    (print-length-loop [aseq (seq amap)]
-      (when aseq
-        ;;compiler gets confused with nested macro if it isn't namespaced
-        ;;it tries to use clojure.pprint/pprint-logical-block for some reason
-        (m/pprint-logical-block
-          (write-out (ffirst aseq))
-          (-write *out* " ")
-          (pprint-newline :linear)
-          (set! *current-length* 0)   ;always print both parts of the [k v] pair
-          (write-out (fnext (first aseq))))
-        (when (next aseq)
-          (-write *out* ", ")
-          (pprint-newline :linear)
-          (recur (next aseq)))))))
+  (let [[ns lift-map] (when (not (record? amap))
+                            (#'cljs.core/lift-ns amap))
+        amap (or lift-map amap)
+        prefix (if ns (str "#:" ns "{") "{")]
+    (pprint-logical-block :prefix prefix :suffix "}"
+      (print-length-loop [aseq (seq amap)]
+        (when aseq
+          ;;compiler gets confused with nested macro if it isn't namespaced
+          ;;it tries to use clojure.pprint/pprint-logical-block for some reason
+          (m/pprint-logical-block
+            (write-out (ffirst aseq))
+            (-write *out* " ")
+            (pprint-newline :linear)
+            (set! *current-length* 0)   ;always print both parts of the [k v] pair
+            (write-out (fnext (first aseq))))
+          (when (next aseq)
+            (-write *out* ", ")
+            (pprint-newline :linear)
+            (recur (next aseq))))))))
 
 (defn- pprint-simple-default [obj]
   ;;TODO: Update to handle arrays (?) and suppressing namespaces

@@ -24,28 +24,76 @@
   (-> (.replace s re-surrogate-pair "$2$1")
       (.. (split "") (reverse) (join ""))))
 
+(defn- replace-all
+  [s re replacement]
+  (let [r (js/RegExp. (.-source re)
+                      (cond-> "g"
+                        (.-ignoreCase re) (str "i")
+                        (.-multiline re) (str "m")
+                        (.-unicode re) (str "u")))]
+    (.replace s r replacement)))
+
+(defn- replace-with
+  [f]
+  (fn [& args]
+    (let [matches (drop-last 2 args)]
+      (if (= (count matches) 1)
+        (f (first matches))
+        (f (vec matches))))))
+
 (defn replace
   "Replaces all instance of match with replacement in s.
+
    match/replacement can be:
 
    string / string
-   pattern / (string or function of match)."
+   pattern / (string or function of match).
+
+   See also replace-first.
+
+   The replacement is literal (i.e. none of its characters are treated
+   specially) for all cases above except pattern / string.
+
+   For pattern / string, $1, $2, etc. in the replacement string are
+   substituted with the string that matched the corresponding
+   parenthesized group in the pattern.
+
+   Example:
+   (clojure.string/replace \"Almost Pig Latin\" #\"\\b(\\w)(\\w+)\\b\" \"$2$1ay\")
+   -> \"lmostAay igPay atinLay\""
   [s match replacement]
   (cond
     (string? match)
     (.replace s (js/RegExp. (gstring/regExpEscape match) "g") replacement)
 
     (instance? js/RegExp match)
-    (.replace s (js/RegExp. (.-source match) "g") replacement)
+    (if (string? replacement)
+      (replace-all s match replacement)
+      (replace-all s match (replace-with replacement)))
 
     :else (throw (str "Invalid match arg: " match))))
 
 (defn replace-first
   "Replaces the first instance of match with replacement in s.
+
    match/replacement can be:
 
    string / string
-   pattern / (string or function of match)."
+   pattern / (string or function of match).
+
+   See also replace.
+
+   The replacement is literal (i.e. none of its characters are treated
+   specially) for all cases above except pattern / string.
+
+   For pattern / string, $1, $2, etc. in the replacement string are
+   substituted with the string that matched the corresponding
+   parenthesized group in the pattern.
+
+   Example:
+   (clojure.string/replace-first \"swap first two words\"
+                                 #\"(\\w+)(\\s+)(\\w+)\" \"$3$2$1\")
+   -> \"first swap two words\""
   [s match replacement]
   (.replace s match replacement))
 
@@ -82,10 +130,7 @@
   "Converts first character of the string to upper-case, all other
   characters to lower-case."
   [s]
-  (if (< (count s) 2)
-    (upper-case s)
-    (str (upper-case (subs s 0 1))
-         (lower-case (subs s 1)))))
+  (gstring/capitalize s))
 
 ;; The JavaScript split function takes a limit argument but the return
 ;; value is not the same as the Java split function.
@@ -105,7 +150,7 @@
 
 (defn- discard-trailing-if-needed
   [limit v]
-  (if (== 0 limit)
+  (if (and (== 0 limit) (< 1 (count v)))
     (pop-last-while-empty v)
     v))
 
@@ -144,7 +189,7 @@
                    (conj parts s))))))))))
 
 (defn split-lines
-  "Splits s on \n or \r\n."
+  "Splits s on \\n or \\r\\n."
   [s]
   (split s #"\n|\r\n"))
 
@@ -176,7 +221,7 @@
           (recur (dec index))
           (.substring s 0 index))))))
 
-(defn blank?
+(defn ^boolean blank?
   "True is s is nil, empty, or contains only whitespace."
   [s]
   (gstring/isEmptySafe s))
@@ -199,3 +244,46 @@
             (.append buffer (str replacement))
             (.append buffer ch))
           (recur (inc index)))))))
+
+(defn index-of
+  "Return index of value (string or char) in s, optionally searching
+  forward from from-index or nil if not found."
+  ([s value]
+   (let [result (.indexOf s value)]
+     (if (neg? result)
+       nil
+       result)))
+  ([s value from-index]
+   (let [result (.indexOf s value from-index)]
+     (if (neg? result)
+       nil
+       result))))
+
+(defn last-index-of
+  "Return last index of value (string or char) in s, optionally
+  searching backward from from-index or nil if not found."
+  ([s value]
+   (let [result (.lastIndexOf s value)]
+     (if (neg? result)
+       nil
+       result)))
+  ([s value from-index]
+   (let [result (.lastIndexOf s value from-index)]
+     (if (neg? result)
+       nil
+       result))))
+
+(defn ^boolean starts-with?
+  "True if s starts with substr."
+  [s substr]
+  (gstring/startsWith s substr))
+
+(defn ^boolean ends-with?
+  "True if s ends with substr."
+  [s substr]
+  (gstring/endsWith s substr))
+
+(defn ^boolean includes?
+  "True if s includes substr."
+  [s substr]
+  (gstring/contains s substr))

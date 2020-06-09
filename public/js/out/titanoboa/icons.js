@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.28 {}
+// Compiled by ClojureScript 1.10.238 {}
 goog.provide('titanoboa.icons');
 goog.require('cljs.core');
 goog.require('reagent.core');
@@ -24,12 +24,12 @@ titanoboa.icons.icons = reagent.core.atom.call(null,cljs.core.PersistentHashMap.
 titanoboa.icons.get_icon_fn = (function titanoboa$icons$get_icon_fn(svg){
 if((cljs.core.first.call(null,svg) instanceof cljs.core.Keyword)){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"keyword?","keyword?",1917797069,null),cljs.core.list(new cljs.core.Symbol(null,"first","first",996428481,null),new cljs.core.Symbol(null,"svg","svg",-1797646627,null)))))].join('')));
+throw (new Error("Assert failed: (keyword? (first svg))"));
 }
 
 if(cljs.core.map_QMARK_.call(null,cljs.core.second.call(null,svg))){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),cljs.core.list(new cljs.core.Symbol(null,"second","second",1195829517,null),new cljs.core.Symbol(null,"svg","svg",-1797646627,null)))))].join('')));
+throw (new Error("Assert failed: (map? (second svg))"));
 }
 
 return (function (m){
@@ -39,7 +39,7 @@ return cljs.core.update_in.call(null,svg,new cljs.core.PersistentVector(null, 1,
 titanoboa.icons.find_icon = (function titanoboa$icons$find_icon(k){
 var i = cljs.core.get.call(null,cljs.core.deref.call(null,titanoboa.icons.icons),k);
 if((i instanceof cljs.core.Keyword)){
-return titanoboa$icons$find_icon.call(null,i);
+return titanoboa.icons.find_icon.call(null,i);
 } else {
 return i;
 
@@ -47,32 +47,32 @@ return i;
 });
 titanoboa.icons.get_icon = (function titanoboa$icons$get_icon(name,inactive_QMARK_,opts){
 var key = cljs.core.keyword.call(null,name);
-var svg = (cljs.core.truth_(inactive_QMARK_)?(function (){var or__5008__auto__ = titanoboa.icons.find_icon.call(null,cljs.core.keyword.call(null,[cljs.core.str(name),cljs.core.str("-inactive")].join('')));
-if(cljs.core.truth_(or__5008__auto__)){
-return or__5008__auto__;
+var svg = (cljs.core.truth_(inactive_QMARK_)?(function (){var or__3922__auto__ = titanoboa.icons.find_icon.call(null,cljs.core.keyword.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name),"-inactive"].join('')));
+if(cljs.core.truth_(or__3922__auto__)){
+return or__3922__auto__;
 } else {
-var or__5008__auto____$1 = titanoboa.icons.find_icon.call(null,key);
-if(cljs.core.truth_(or__5008__auto____$1)){
-return or__5008__auto____$1;
+var or__3922__auto____$1 = titanoboa.icons.find_icon.call(null,key);
+if(cljs.core.truth_(or__3922__auto____$1)){
+return or__3922__auto____$1;
 } else {
 return titanoboa.icons.find_icon.call(null,new cljs.core.Keyword(null,"default","default",-1987822328));
 }
 }
-})():(function (){var or__5008__auto__ = titanoboa.icons.find_icon.call(null,key);
-if(cljs.core.truth_(or__5008__auto__)){
-return or__5008__auto__;
+})():(function (){var or__3922__auto__ = titanoboa.icons.find_icon.call(null,key);
+if(cljs.core.truth_(or__3922__auto__)){
+return or__3922__auto__;
 } else {
 return titanoboa.icons.find_icon.call(null,new cljs.core.Keyword(null,"default","default",-1987822328));
 }
 })());
 if((cljs.core.first.call(null,svg) instanceof cljs.core.Keyword)){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"keyword?","keyword?",1917797069,null),cljs.core.list(new cljs.core.Symbol(null,"first","first",996428481,null),new cljs.core.Symbol(null,"svg","svg",-1797646627,null)))))].join('')));
+throw (new Error("Assert failed: (keyword? (first svg))"));
 }
 
 if(cljs.core.map_QMARK_.call(null,cljs.core.second.call(null,svg))){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),cljs.core.list(new cljs.core.Symbol(null,"second","second",1195829517,null),new cljs.core.Symbol(null,"svg","svg",-1797646627,null)))))].join('')));
+throw (new Error("Assert failed: (map? (second svg))"));
 }
 
 return cljs.core.update_in.call(null,svg,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1)], null),cljs.core.merge,opts);

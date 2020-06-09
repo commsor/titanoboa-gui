@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.28 {}
+// Compiled by ClojureScript 1.10.238 {}
 goog.provide('re_com.dropdown');
 goog.require('cljs.core');
 goog.require('re_com.util');
@@ -26,8 +26,8 @@ return null;
 re_com.dropdown.choices_with_group_headings = (function re_com$dropdown$choices_with_group_headings(opts,group_fn){
 var groups = cljs.core.partition_by.call(null,group_fn,opts);
 var group_headers = cljs.core.map.call(null,((function (groups){
-return (function (p1__16211_SHARP_){
-return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"group","group",582596132)],[cljs.core.gensym.call(null),p1__16211_SHARP_]);
+return (function (p1__7132_SHARP_){
+return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"group","group",582596132)],[cljs.core.gensym.call(null),p1__7132_SHARP_]);
 });})(groups))
 ,cljs.core.map.call(null,group_fn,cljs.core.map.call(null,cljs.core.first,groups)));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [group_headers,groups], null);
@@ -41,8 +41,8 @@ var lower_filter_text = clojure.string.lower_case.call(null,filter_text);
 var filter_fn = ((function (lower_filter_text){
 return (function (opt){
 var group = (((group_fn.call(null,opt) == null))?"":group_fn.call(null,opt));
-var label = [cljs.core.str(label_fn.call(null,opt))].join('');
-return ((clojure.string.lower_case.call(null,group).indexOf(lower_filter_text) >= (0))) || ((clojure.string.lower_case.call(null,label).indexOf(lower_filter_text) >= (0)));
+var label = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(label_fn.call(null,opt))].join('');
+return (((clojure.string.lower_case.call(null,group).indexOf(lower_filter_text) >= (0))) || ((clojure.string.lower_case.call(null,label).indexOf(lower_filter_text) >= (0))));
 });})(lower_filter_text))
 ;
 return cljs.core.filter.call(null,filter_fn,choices);
@@ -53,11 +53,11 @@ return cljs.core.filter.call(null,filter_fn,choices);
  */
 re_com.dropdown.filter_choices_regex = (function re_com$dropdown$filter_choices_regex(choices,group_fn,label_fn,filter_text){
 var re = (function (){try{return (new RegExp(filter_text,"i"));
-}catch (e16213){if((e16213 instanceof Object)){
-var e = e16213;
+}catch (e7133){if((e7133 instanceof Object)){
+var e = e7133;
 return null;
 } else {
-throw e16213;
+throw e7133;
 
 }
 }})();
@@ -66,9 +66,9 @@ return (function (re__$1,opt){
 if((re__$1 == null)){
 return null;
 } else {
-var or__5008__auto__ = re__$1.test(group_fn.call(null,opt));
-if(cljs.core.truth_(or__5008__auto__)){
-return or__5008__auto__;
+var or__3922__auto__ = re__$1.test(group_fn.call(null,opt));
+if(cljs.core.truth_(or__3922__auto__)){
+return or__3922__auto__;
 } else {
 return re__$1.test(label_fn.call(null,opt));
 }
@@ -93,9 +93,9 @@ var parent = node.parentNode;
 var parent_height = parent.clientHeight;
 var parent_visible_top = parent.scrollTop;
 var parent_visible_bottom = (parent_visible_top + parent_height);
-var new_scroll_top = (((item_offset_bottom > parent_visible_bottom))?(function (){var x__5320__auto__ = (item_offset_bottom - parent_height);
-var y__5321__auto__ = (0);
-return ((x__5320__auto__ > y__5321__auto__) ? x__5320__auto__ : y__5321__auto__);
+var new_scroll_top = (((item_offset_bottom > parent_visible_bottom))?(function (){var x__4006__auto__ = (item_offset_bottom - parent_height);
+var y__4007__auto__ = (0);
+return ((x__4006__auto__ > y__4007__auto__) ? x__4006__auto__ : y__4007__auto__);
 })():(((item_offset_top < parent_visible_top))?item_offset_top:null));
 if(cljs.core.truth_(new_scroll_top)){
 return parent.scrollTop = new_scroll_top;
@@ -138,7 +138,7 @@ return null;
 return (function (id__$1,label__$1,on_click__$1,internal_model__$1){
 var selected = cljs.core._EQ_.call(null,cljs.core.deref.call(null,internal_model__$1),id__$1);
 var class$ = ((selected)?"highlighted":(cljs.core.truth_(cljs.core.deref.call(null,mouse_over_QMARK_))?"mouseover":null));
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),[cljs.core.str("active-result group-option "),cljs.core.str(class$)].join(''),new cljs.core.Keyword(null,"on-mouse-over","on-mouse-over",-858472552),((function (selected,class$,mouse_over_QMARK_){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),["active-result group-option ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(class$)].join(''),new cljs.core.Keyword(null,"on-mouse-over","on-mouse-over",-858472552),((function (selected,class$,mouse_over_QMARK_){
 return (function (event){
 cljs.core.reset_BANG_.call(null,mouse_over_QMARK_,true);
 
@@ -163,7 +163,7 @@ return null;
 re_com.dropdown.make_choice_item = (function re_com$dropdown$make_choice_item(id_fn,label_fn,callback,internal_model,opt){
 var id = id_fn.call(null,opt);
 var label = label_fn.call(null,opt);
-return cljs.core.with_meta(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.choice_item,id,label,callback,internal_model], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),[cljs.core.str(id)].join('')], null));
+return cljs.core.with_meta(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.choice_item,id,label,callback,internal_model], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(id)].join('')], null));
 });
 /**
  * Base function (before lifecycle metadata) to render a filter text box
@@ -191,11 +191,11 @@ return null;
 /**
  * Render a filter text box
  */
-re_com.dropdown.filter_text_box = cljs.core.with_meta.call(null,re_com.dropdown.filter_text_box_base,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),(function (p1__16214_SHARP_){
-var node = reagent.core.dom_node.call(null,p1__16214_SHARP_).firstChild;
+re_com.dropdown.filter_text_box = cljs.core.with_meta.call(null,re_com.dropdown.filter_text_box_base,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),(function (p1__7134_SHARP_){
+var node = reagent.core.dom_node.call(null,p1__7134_SHARP_).firstChild;
 return node.focus();
-}),new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),(function (p1__16215_SHARP_){
-var node = reagent.core.dom_node.call(null,p1__16215_SHARP_).firstChild;
+}),new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),(function (p1__7135_SHARP_){
+var node = reagent.core.dom_node.call(null,p1__7135_SHARP_).firstChild;
 return node.focus();
 })], null));
 /**
@@ -243,70 +243,70 @@ return null;
 re_com.dropdown.single_dropdown_args_desc = new cljs.core.PersistentVector(null, 16, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"choices","choices",1385611597),new cljs.core.Keyword(null,"required","required",1807647006),true,new cljs.core.Keyword(null,"type","type",1174270348),"vector of choices | atom",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.vector_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"Each is expected to have an id, label and, optionally, a group, provided by ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":id-fn"], null),", ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":label-fn"], null)," & ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":group-fn"], null)], null)], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"id-fn","id-fn",316222798),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"type","type",1174270348),"choice -> anything",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.ifn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"given an element of ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":choices"], null),", returns its unique identifier (aka id)"], null)], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"label-fn","label-fn",-860923263),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.Keyword(null,"label","label",1718410804),new cljs.core.Keyword(null,"type","type",1174270348),"choice -> string | hiccup",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.ifn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"given an element of ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":choices"], null),", returns its displayable label"], null)], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"group-fn","group-fn",129203707),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),new cljs.core.Keyword(null,"group","group",582596132),new cljs.core.Keyword(null,"type","type",1174270348),"choice -> anything",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.ifn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"given an element of ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":choices"], null),", returns its group identifier"], null)], null),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"model","model",331153215),new cljs.core.Keyword(null,"required","required",1807647006),true,new cljs.core.Keyword(null,"type","type",1174270348),"the id of a choice | atom",new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"the id of the selected choice. If nil, ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":placeholder"], null)," text is shown"], null)], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"on-change","on-change",-732046149),new cljs.core.Keyword(null,"required","required",1807647006),true,new cljs.core.Keyword(null,"type","type",1174270348),"id -> nil",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.fn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"called when a new choice is selected. Passed the id of new choice"], null)], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean | atom",new cljs.core.Keyword(null,"description","description",-1428560544),"if true, no user selection is allowed"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"filter-box?","filter-box?",-1157583688),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean",new cljs.core.Keyword(null,"description","description",-1428560544),"if true, a filter text field is placed at the top of the dropdown"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"regex-filter?","regex-filter?",-824895668),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean | atom",new cljs.core.Keyword(null,"description","description",-1428560544),"if true, the filter text field will support JavaScript regular expressions. If false, just plain text"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"background text when no selection"], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"width","width",-384071477),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),"100%",new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"the CSS width. e.g.: \"500px\" or \"20em\""], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"max-height","max-height",-612563804),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),"240px",new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"the maximum height of the dropdown part"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"tab-index","tab-index",895755393),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"integer | string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.number_or_string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"component's tabindex. A value of -1 removes from order"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"CSS class names, space separated"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"CSS style map",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.css_style_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"CSS styles to add or override"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"attr","attr",-604132353),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"HTML attr map",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.html_attr_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"HTML attributes, like ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":on-mouse-move"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),"No ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":class"], null)," or ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":style"], null),"allowed"], null)], null)], null);
 /**
  * Render a single dropdown component which emulates the bootstrap-choosen style. Sample choices object:
- * [{:id "AU" :label "Australia"      :group "Group 1"}
- * {:id "US" :label "United States"  :group "Group 1"}
- * {:id "GB" :label "United Kingdom" :group "Group 1"}
- * {:id "AF" :label "Afghanistan"    :group "Group 2"}]
+ *   [{:id "AU" :label "Australia"      :group "Group 1"}
+ *    {:id "US" :label "United States"  :group "Group 1"}
+ *    {:id "GB" :label "United Kingdom" :group "Group 1"}
+ *    {:id "AF" :label "Afghanistan"    :group "Group 2"}]
  */
-re_com.dropdown.single_dropdown = (function re_com$dropdown$single_dropdown(){
-var args__6054__auto__ = [];
-var len__6047__auto___16228 = arguments.length;
-var i__6048__auto___16229 = (0);
+re_com.dropdown.single_dropdown = (function re_com$dropdown$single_dropdown(var_args){
+var args__4502__auto__ = [];
+var len__4499__auto___7150 = arguments.length;
+var i__4500__auto___7151 = (0);
 while(true){
-if((i__6048__auto___16229 < len__6047__auto___16228)){
-args__6054__auto__.push((arguments[i__6048__auto___16229]));
+if((i__4500__auto___7151 < len__4499__auto___7150)){
+args__4502__auto__.push((arguments[i__4500__auto___7151]));
 
-var G__16230 = (i__6048__auto___16229 + (1));
-i__6048__auto___16229 = G__16230;
+var G__7152 = (i__4500__auto___7151 + (1));
+i__4500__auto___7151 = G__7152;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__6055__auto__ = ((((0) < args__6054__auto__.length))?(new cljs.core.IndexedSeq(args__6054__auto__.slice((0)),(0))):null);
-return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(argseq__6055__auto__);
+var argseq__4503__auto__ = ((((0) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((0)),(0),null)):null);
+return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(argseq__4503__auto__);
 });
 
-re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__16220){
-var map__16221 = p__16220;
-var map__16221__$1 = ((((!((map__16221 == null)))?((((map__16221.cljs$lang$protocol_mask$partition0$ & (64))) || (map__16221.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__16221):map__16221);
-var args = map__16221__$1;
-var model = cljs.core.get.call(null,map__16221__$1,new cljs.core.Keyword(null,"model","model",331153215));
+re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__7140){
+var map__7141 = p__7140;
+var map__7141__$1 = ((((!((map__7141 == null)))?(((((map__7141.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__7141.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__7141):map__7141);
+var args = map__7141__$1;
+var model = cljs.core.get.call(null,map__7141__$1,new cljs.core.Keyword(null,"model","model",331153215));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.dropdown.single_dropdown_args_desc),args,"single-dropdown")))){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"validate-args-macro","validate-args-macro",-1576181756,null),new cljs.core.Symbol(null,"single-dropdown-args-desc","single-dropdown-args-desc",1154344533,null),new cljs.core.Symbol(null,"args","args",-1338879193,null),"single-dropdown")))].join('')));
+throw (new Error("Assert failed: (validate-args-macro single-dropdown-args-desc args \"single-dropdown\")"));
 }
 
 var external_model = reagent.core.atom.call(null,re_com.util.deref_or_value.call(null,model));
 var internal_model = reagent.core.atom.call(null,cljs.core.deref.call(null,external_model));
 var drop_showing_QMARK_ = reagent.core.atom.call(null,false);
 var filter_text = reagent.core.atom.call(null,"");
-return ((function (external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+return ((function (external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function() { 
-var G__16231__delegate = function (p__16223){
-var map__16224 = p__16223;
-var map__16224__$1 = ((((!((map__16224 == null)))?((((map__16224.cljs$lang$protocol_mask$partition0$ & (64))) || (map__16224.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__16224):map__16224);
-var args__$1 = map__16224__$1;
-var group_fn = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"group-fn","group-fn",129203707),new cljs.core.Keyword(null,"group","group",582596132));
-var disabled_QMARK_ = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var on_change = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var model__$1 = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var attr = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var label_fn = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"label-fn","label-fn",-860923263),new cljs.core.Keyword(null,"label","label",1718410804));
-var tab_index = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"tab-index","tab-index",895755393));
-var max_height = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"max-height","max-height",-612563804));
-var placeholder = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083));
-var width = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-var regex_filter_QMARK_ = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"regex-filter?","regex-filter?",-824895668));
-var choices = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"choices","choices",1385611597));
-var id_fn = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"id-fn","id-fn",316222798),new cljs.core.Keyword(null,"id","id",-1388402092));
-var style = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var class$ = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var filter_box_QMARK_ = cljs.core.get.call(null,map__16224__$1,new cljs.core.Keyword(null,"filter-box?","filter-box?",-1157583688));
+var G__7153__delegate = function (p__7143){
+var map__7144 = p__7143;
+var map__7144__$1 = ((((!((map__7144 == null)))?(((((map__7144.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__7144.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__7144):map__7144);
+var args__$1 = map__7144__$1;
+var group_fn = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"group-fn","group-fn",129203707),new cljs.core.Keyword(null,"group","group",582596132));
+var disabled_QMARK_ = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var on_change = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var model__$1 = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var attr = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var label_fn = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"label-fn","label-fn",-860923263),new cljs.core.Keyword(null,"label","label",1718410804));
+var tab_index = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"tab-index","tab-index",895755393));
+var max_height = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"max-height","max-height",-612563804));
+var placeholder = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083));
+var width = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+var regex_filter_QMARK_ = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"regex-filter?","regex-filter?",-824895668));
+var choices = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"choices","choices",1385611597));
+var id_fn = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"id-fn","id-fn",316222798),new cljs.core.Keyword(null,"id","id",-1388402092));
+var style = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var class$ = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var filter_box_QMARK_ = cljs.core.get.call(null,map__7144__$1,new cljs.core.Keyword(null,"filter-box?","filter-box?",-1157583688));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.dropdown.single_dropdown_args_desc),args__$1,"single-dropdown")))){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"validate-args-macro","validate-args-macro",-1576181756,null),new cljs.core.Symbol(null,"single-dropdown-args-desc","single-dropdown-args-desc",1154344533,null),new cljs.core.Symbol(null,"args","args",-1338879193,null),"single-dropdown")))].join('')));
+throw (new Error("Assert failed: (validate-args-macro single-dropdown-args-desc args \"single-dropdown\")"));
 }
 
 var choices__$1 = re_com.util.deref_or_value.call(null,choices);
@@ -319,16 +319,16 @@ cljs.core.reset_BANG_.call(null,external_model,cljs.core.deref.call(null,latest_
 return cljs.core.reset_BANG_.call(null,internal_model,cljs.core.deref.call(null,latest_ext_model));
 })()
 :null);
-var changeable_QMARK_ = (function (){var and__4996__auto__ = on_change;
-if(cljs.core.truth_(and__4996__auto__)){
+var changeable_QMARK_ = (function (){var and__3911__auto__ = on_change;
+if(cljs.core.truth_(and__3911__auto__)){
 return cljs.core.not.call(null,disabled_QMARK___$1);
 } else {
-return and__4996__auto__;
+return and__3911__auto__;
 }
 })();
-var callback = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
-return (function (p1__16216_SHARP_){
-cljs.core.reset_BANG_.call(null,internal_model,p1__16216_SHARP_);
+var callback = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
+return (function (p1__7136_SHARP_){
+cljs.core.reset_BANG_.call(null,internal_model,p1__7136_SHARP_);
 
 if(cljs.core.truth_(changeable_QMARK_)){
 on_change.call(null,cljs.core.deref.call(null,internal_model));
@@ -338,28 +338,28 @@ on_change.call(null,cljs.core.deref.call(null,internal_model));
 cljs.core.swap_BANG_.call(null,drop_showing_QMARK_,cljs.core.not);
 
 return cljs.core.reset_BANG_.call(null,filter_text,"");
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var cancel = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var cancel = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,false);
 
 cljs.core.reset_BANG_.call(null,filter_text,"");
 
 return cljs.core.reset_BANG_.call(null,internal_model,cljs.core.deref.call(null,external_model));
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var dropdown_click = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var dropdown_click = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 return null;
 } else {
 return cljs.core.swap_BANG_.call(null,drop_showing_QMARK_,cljs.core.not);
 }
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
 var filtered_choices = (cljs.core.truth_(regex_filter_QMARK___$1)?re_com.dropdown.filter_choices_regex.call(null,choices__$1,group_fn,label_fn,cljs.core.deref.call(null,filter_text)):re_com.dropdown.filter_choices.call(null,choices__$1,group_fn,label_fn,cljs.core.deref.call(null,filter_text)));
-var press_enter = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_enter = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 cancel.call(null);
@@ -368,16 +368,16 @@ callback.call(null,cljs.core.deref.call(null,internal_model));
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_escape = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_escape = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 cancel.call(null);
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_tab = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_tab = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 cancel.call(null);
@@ -395,9 +395,9 @@ cljs.core.reset_BANG_.call(null,filter_text,"");
 cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,false);
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_up = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_up = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 if(cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),(-1)));
@@ -406,9 +406,9 @@ cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,true);
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_down = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_down = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 if(cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),(1)));
@@ -417,29 +417,29 @@ cljs.core.reset_BANG_.call(null,drop_showing_QMARK_,true);
 }
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_home = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_home = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),new cljs.core.Keyword(null,"start","start",-355208981)));
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var press_end = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var press_end = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (){
 cljs.core.reset_BANG_.call(null,internal_model,re_com.dropdown.move_to_new_choice.call(null,filtered_choices,id_fn,cljs.core.deref.call(null,internal_model),new cljs.core.Keyword(null,"end","end",-268185958)));
 
 return true;
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var key_handler = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
-return (function (p1__16217_SHARP_){
+var key_handler = ((function (choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
+return (function (p1__7137_SHARP_){
 if(cljs.core.truth_(disabled_QMARK___$1)){
 return false;
 } else {
-var G__16226 = p1__16217_SHARP_.which;
-switch (G__16226) {
+var G__7146 = p1__7137_SHARP_.which;
+switch (G__7146) {
 case (13):
 return press_enter.call(null);
 
@@ -473,58 +473,61 @@ return filter_box_QMARK_;
 
 }
 }
-});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),[cljs.core.str("rc-dropdown chosen-container chosen-container-single noselect "),cljs.core.str((cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))?"chosen-container-active chosen-with-drop ":null)),cljs.core.str(class$)].join(''),new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.merge.call(null,re_com.box.flex_child_style.call(null,(cljs.core.truth_(width)?"0 0 auto":"auto")),re_com.box.align_style.call(null,new cljs.core.Keyword(null,"align-self","align-self",1475936794),new cljs.core.Keyword(null,"start","start",-355208981)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"width","width",-384071477),(cljs.core.truth_(width)?width:null)], null),style)], null),attr),new cljs.core.PersistentVector(null, 11, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.dropdown_top,internal_model,choices__$1,id_fn,label_fn,tab_index,placeholder,dropdown_click,key_handler,filter_box_QMARK_,drop_showing_QMARK_], null),(cljs.core.truth_((function (){var and__4996__auto__ = cljs.core.deref.call(null,drop_showing_QMARK_);
-if(cljs.core.truth_(and__4996__auto__)){
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),["rc-dropdown chosen-container chosen-container-single noselect ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(cljs.core.deref.call(null,drop_showing_QMARK_))?"chosen-container-active chosen-with-drop ":null)),cljs.core.str.cljs$core$IFn$_invoke$arity$1(class$)].join(''),new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.merge.call(null,re_com.box.flex_child_style.call(null,(cljs.core.truth_(width)?"0 0 auto":"auto")),re_com.box.align_style.call(null,new cljs.core.Keyword(null,"align-self","align-self",1475936794),new cljs.core.Keyword(null,"start","start",-355208981)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"width","width",-384071477),(cljs.core.truth_(width)?width:null)], null),style)], null),attr),new cljs.core.PersistentVector(null, 11, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.dropdown_top,internal_model,choices__$1,id_fn,label_fn,tab_index,placeholder,dropdown_click,key_handler,filter_box_QMARK_,drop_showing_QMARK_], null),(cljs.core.truth_((function (){var and__3911__auto__ = cljs.core.deref.call(null,drop_showing_QMARK_);
+if(cljs.core.truth_(and__3911__auto__)){
 return cljs.core.not.call(null,disabled_QMARK___$1);
 } else {
-return and__4996__auto__;
+return and__3911__auto__;
 }
-})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.chosen-drop","div.chosen-drop",-1110109208),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.filter_text_box,filter_box_QMARK_,filter_text,key_handler,drop_showing_QMARK_], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.chosen-results","ul.chosen-results",-932618517),(cljs.core.truth_(max_height)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"max-height","max-height",-612563804),max_height], null)], null):null),(((cljs.core.count.call(null,filtered_choices) > (0)))?(function (){var vec__16227 = re_com.dropdown.choices_with_group_headings.call(null,filtered_choices,group_fn);
-var group_names = cljs.core.nth.call(null,vec__16227,(0),null);
-var group_opt_lists = cljs.core.nth.call(null,vec__16227,(1),null);
+})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.chosen-drop","div.chosen-drop",-1110109208),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.dropdown.filter_text_box,filter_box_QMARK_,filter_text,key_handler,drop_showing_QMARK_], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.chosen-results","ul.chosen-results",-932618517),(cljs.core.truth_(max_height)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"max-height","max-height",-612563804),max_height], null)], null):null),(((cljs.core.count.call(null,filtered_choices) > (0)))?(function (){var vec__7147 = re_com.dropdown.choices_with_group_headings.call(null,filtered_choices,group_fn);
+var group_names = cljs.core.nth.call(null,vec__7147,(0),null);
+var group_opt_lists = cljs.core.nth.call(null,vec__7147,(1),null);
 var make_a_choice = cljs.core.partial.call(null,re_com.dropdown.make_choice_item,id_fn,label_fn,callback,internal_model);
-var make_choices = ((function (vec__16227,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
-return (function (p1__16218_SHARP_){
-return cljs.core.map.call(null,make_a_choice,p1__16218_SHARP_);
-});})(vec__16227,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+var make_choices = ((function (vec__7147,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
+return (function (p1__7138_SHARP_){
+return cljs.core.map.call(null,make_a_choice,p1__7138_SHARP_);
+});})(vec__7147,group_names,group_opt_lists,make_a_choice,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
-var make_h_then_choices = ((function (vec__16227,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model){
+var make_h_then_choices = ((function (vec__7147,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model){
 return (function (h,opts){
 return cljs.core.cons.call(null,re_com.dropdown.make_group_heading.call(null,h),make_choices.call(null,opts));
-});})(vec__16227,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__16224,map__16224__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+});})(vec__7147,group_names,group_opt_lists,make_a_choice,make_choices,choices__$1,disabled_QMARK___$1,regex_filter_QMARK___$1,latest_ext_model,_,changeable_QMARK_,callback,cancel,dropdown_click,filtered_choices,press_enter,press_escape,press_tab,press_up,press_down,press_home,press_end,key_handler,map__7144,map__7144__$1,args__$1,group_fn,disabled_QMARK_,on_change,model__$1,attr,label_fn,tab_index,max_height,placeholder,width,regex_filter_QMARK_,choices,id_fn,style,class$,filter_box_QMARK_,external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 ;
 var has_no_group_names_QMARK_ = (new cljs.core.Keyword(null,"group","group",582596132).cljs$core$IFn$_invoke$arity$1(cljs.core.first.call(null,group_names)) == null);
-if((cljs.core._EQ_.call(null,(1),cljs.core.count.call(null,group_opt_lists))) && (has_no_group_names_QMARK_)){
+if(((cljs.core._EQ_.call(null,(1),cljs.core.count.call(null,group_opt_lists))) && (has_no_group_names_QMARK_))){
 return make_choices.call(null,cljs.core.first.call(null,group_opt_lists));
 } else {
 return cljs.core.apply.call(null,cljs.core.concat,cljs.core.map.call(null,make_h_then_choices,group_names,group_opt_lists));
 }
-})():new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li.no-results","li.no-results",-717682399),[cljs.core.str("No results match \""),cljs.core.str(cljs.core.deref.call(null,filter_text)),cljs.core.str("\"")].join('')], null))], null)], null):null)], null);
+})():new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li.no-results","li.no-results",-717682399),["No results match \"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,filter_text)),"\""].join('')], null))], null)], null):null)], null);
 };
-var G__16231 = function (var_args){
-var p__16223 = null;
+var G__7153 = function (var_args){
+var p__7143 = null;
 if (arguments.length > 0) {
-var G__16233__i = 0, G__16233__a = new Array(arguments.length -  0);
-while (G__16233__i < G__16233__a.length) {G__16233__a[G__16233__i] = arguments[G__16233__i + 0]; ++G__16233__i;}
-  p__16223 = new cljs.core.IndexedSeq(G__16233__a,0);
+var G__7155__i = 0, G__7155__a = new Array(arguments.length -  0);
+while (G__7155__i < G__7155__a.length) {G__7155__a[G__7155__i] = arguments[G__7155__i + 0]; ++G__7155__i;}
+  p__7143 = new cljs.core.IndexedSeq(G__7155__a,0,null);
 } 
-return G__16231__delegate.call(this,p__16223);};
-G__16231.cljs$lang$maxFixedArity = 0;
-G__16231.cljs$lang$applyTo = (function (arglist__16234){
-var p__16223 = cljs.core.seq(arglist__16234);
-return G__16231__delegate(p__16223);
+return G__7153__delegate.call(this,p__7143);};
+G__7153.cljs$lang$maxFixedArity = 0;
+G__7153.cljs$lang$applyTo = (function (arglist__7156){
+var p__7143 = cljs.core.seq(arglist__7156);
+return G__7153__delegate(p__7143);
 });
-G__16231.cljs$core$IFn$_invoke$arity$variadic = G__16231__delegate;
-return G__16231;
+G__7153.cljs$core$IFn$_invoke$arity$variadic = G__7153__delegate;
+return G__7153;
 })()
 ;
-;})(external_model,internal_model,drop_showing_QMARK_,filter_text,map__16221,map__16221__$1,args,model))
+;})(external_model,internal_model,drop_showing_QMARK_,filter_text,map__7141,map__7141__$1,args,model))
 });
 
 re_com.dropdown.single_dropdown.cljs$lang$maxFixedArity = (0);
 
-re_com.dropdown.single_dropdown.cljs$lang$applyTo = (function (seq16219){
-return re_com.dropdown.single_dropdown.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq16219));
+/** @this {Function} */
+re_com.dropdown.single_dropdown.cljs$lang$applyTo = (function (seq7139){
+var self__4487__auto__ = this;
+return self__4487__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq7139));
 });
+
