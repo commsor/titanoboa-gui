@@ -267,6 +267,15 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 });})(map__9070,map__9070__$1,systems))
 ,systems))], null);
 });
+titanoboa.systems.normalize_dependencies = (function titanoboa$systems$normalize_dependencies(dependencies){
+return clojure.walk.prewalk.call(null,(function (p1__9076_SHARP_){
+if((p1__9076_SHARP_ instanceof titanoboa.exp.Expression)){
+return new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(p1__9076_SHARP_);
+} else {
+return p1__9076_SHARP_;
+}
+}),dependencies);
+});
 titanoboa.systems.dependencies_editor = (function titanoboa$systems$dependencies_editor(props){
 var tab_selected = reagent.core.atom.call(null,new cljs.core.Keyword(null,"editor","editor",-989377770));
 var editing_key = reagent.core.atom.call(null,null);
@@ -275,39 +284,39 @@ return (function (props__$1){
 return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel.panel-primary","div.panel.panel-primary",-1076833638),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"width","width",-384071477),"100%",new cljs.core.Keyword(null,"margin","margin",-995903681),"0px 10px 0px 0px",new cljs.core.Keyword(null,"border-width","border-width",-1512605390),"medium",new cljs.core.Keyword(null,"border-radius","border-radius",419594011),"8px"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul.nav.nav-tabs","ul.nav.nav-tabs",1865557319),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"margin","margin",-995903681),"10px 5px 2px 2px"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li.active","li.active",-1051611101),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"role","role",-736691072),"presentation"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),"External Maven Dependencies"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"class","class",-2030961996),["btn btn-default btn-ico-save",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(cljs.core.deref.call(null,titanoboa.systems.dependencies_disabled_QMARK_))?" disabled":null))].join(''),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (tab_selected,editing_key){
 return (function (){
 return titanoboa.api.save_dependencies_BANG_.call(null,cljs.core.deref.call(null,titanoboa.systems.dependencies),(function (){var sb__4430__auto__ = (new goog.string.StringBuffer());
-var _STAR_print_newline_STAR_9077_9084 = cljs.core._STAR_print_newline_STAR_;
-var _STAR_print_fn_STAR_9078_9085 = cljs.core._STAR_print_fn_STAR_;
+var _STAR_print_newline_STAR_9078_9085 = cljs.core._STAR_print_newline_STAR_;
+var _STAR_print_fn_STAR_9079_9086 = cljs.core._STAR_print_fn_STAR_;
 cljs.core._STAR_print_newline_STAR_ = true;
 
-cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9077_9084,_STAR_print_fn_STAR_9078_9085,sb__4430__auto__,tab_selected,editing_key){
+cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9078_9085,_STAR_print_fn_STAR_9079_9086,sb__4430__auto__,tab_selected,editing_key){
 return (function (x__4431__auto__){
 return sb__4430__auto__.append(x__4431__auto__);
-});})(_STAR_print_newline_STAR_9077_9084,_STAR_print_fn_STAR_9078_9085,sb__4430__auto__,tab_selected,editing_key))
+});})(_STAR_print_newline_STAR_9078_9085,_STAR_print_fn_STAR_9079_9086,sb__4430__auto__,tab_selected,editing_key))
 ;
 
-try{fipp.clojure.pprint.call(null,cljs.core.deref.call(null,titanoboa.systems.dependencies_parsed));
-}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9078_9085;
+try{fipp.clojure.pprint.call(null,titanoboa.systems.normalize_dependencies.call(null,cljs.core.deref.call(null,titanoboa.systems.dependencies_parsed)));
+}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9079_9086;
 
-cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9077_9084;
+cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9078_9085;
 }
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4430__auto__)].join('');
 })(),((function (tab_selected,editing_key){
 return (function (r){
 cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies,(function (){var sb__4430__auto__ = (new goog.string.StringBuffer());
-var _STAR_print_newline_STAR_9079_9086 = cljs.core._STAR_print_newline_STAR_;
-var _STAR_print_fn_STAR_9080_9087 = cljs.core._STAR_print_fn_STAR_;
+var _STAR_print_newline_STAR_9080_9087 = cljs.core._STAR_print_newline_STAR_;
+var _STAR_print_fn_STAR_9081_9088 = cljs.core._STAR_print_fn_STAR_;
 cljs.core._STAR_print_newline_STAR_ = true;
 
-cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9079_9086,_STAR_print_fn_STAR_9080_9087,sb__4430__auto__,tab_selected,editing_key){
+cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9080_9087,_STAR_print_fn_STAR_9081_9088,sb__4430__auto__,tab_selected,editing_key){
 return (function (x__4431__auto__){
 return sb__4430__auto__.append(x__4431__auto__);
-});})(_STAR_print_newline_STAR_9079_9086,_STAR_print_fn_STAR_9080_9087,sb__4430__auto__,tab_selected,editing_key))
+});})(_STAR_print_newline_STAR_9080_9087,_STAR_print_fn_STAR_9081_9088,sb__4430__auto__,tab_selected,editing_key))
 ;
 
-try{fipp.clojure.pprint.call(null,cljs.core.deref.call(null,titanoboa.systems.dependencies_parsed));
-}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9080_9087;
+try{fipp.clojure.pprint.call(null,titanoboa.systems.normalize_dependencies.call(null,cljs.core.deref.call(null,titanoboa.systems.dependencies_parsed)));
+}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9081_9088;
 
-cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9079_9086;
+cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9080_9087;
 }
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4430__auto__)].join('');
 })());
@@ -339,22 +348,22 @@ return (function (){
 return cljs.core.reset_BANG_.call(null,tab_selected,new cljs.core.Keyword(null,"edn","edn",1317840885));
 });})(tab_selected,editing_key))
 ], null),"EDN"], null)], null)], null),((cljs.core._EQ_.call(null,cljs.core.deref.call(null,tab_selected),new cljs.core.Keyword(null,"edn","edn",1317840885)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.designer.code_mirror,new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"key","key",-1516042587),"cluster ext dependencies edit",new cljs.core.Keyword(null,"value-atom","value-atom",-887321133),titanoboa.systems.dependencies_parsed,new cljs.core.Keyword(null,"base-value","base-value",921379228),cljs.core.deref.call(null,titanoboa.systems.dependencies_parsed),new cljs.core.Keyword(null,"transform-read-fn","transform-read-fn",-346718559),((function (tab_selected,editing_key){
-return (function (p1__9076_SHARP_){
+return (function (p1__9077_SHARP_){
 var sb__4430__auto__ = (new goog.string.StringBuffer());
-var _STAR_print_newline_STAR_9081_9088 = cljs.core._STAR_print_newline_STAR_;
-var _STAR_print_fn_STAR_9082_9089 = cljs.core._STAR_print_fn_STAR_;
+var _STAR_print_newline_STAR_9082_9089 = cljs.core._STAR_print_newline_STAR_;
+var _STAR_print_fn_STAR_9083_9090 = cljs.core._STAR_print_fn_STAR_;
 cljs.core._STAR_print_newline_STAR_ = true;
 
-cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9081_9088,_STAR_print_fn_STAR_9082_9089,sb__4430__auto__,tab_selected,editing_key){
+cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_9082_9089,_STAR_print_fn_STAR_9083_9090,sb__4430__auto__,tab_selected,editing_key){
 return (function (x__4431__auto__){
 return sb__4430__auto__.append(x__4431__auto__);
-});})(_STAR_print_newline_STAR_9081_9088,_STAR_print_fn_STAR_9082_9089,sb__4430__auto__,tab_selected,editing_key))
+});})(_STAR_print_newline_STAR_9082_9089,_STAR_print_fn_STAR_9083_9090,sb__4430__auto__,tab_selected,editing_key))
 ;
 
-try{fipp.clojure.pprint.call(null,p1__9076_SHARP_);
-}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9082_9089;
+try{fipp.clojure.pprint.call(null,p1__9077_SHARP_);
+}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_9083_9090;
 
-cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9081_9088;
+cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_9082_9089;
 }
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4430__auto__)].join('');
 });})(tab_selected,editing_key))
@@ -362,11 +371,11 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__4430__auto__)].join('');
 return (function (val){
 try{var new_val = cljs.reader.read_string.call(null,val);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"status","status",-1997798413),new cljs.core.Keyword(null,"ok","ok",967785236),new cljs.core.Keyword(null,"message","message",-406056002),null,new cljs.core.Keyword(null,"value","value",305978217),new_val], null);
-}catch (e9083){if((e9083 instanceof Error)){
-var err = e9083;
+}catch (e9084){if((e9084 instanceof Error)){
+var err = e9084;
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"status","status",-1997798413),new cljs.core.Keyword(null,"error","error",-978969032),new cljs.core.Keyword(null,"message","message",-406056002),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(err)].join(''),new cljs.core.Keyword(null,"value","value",305978217),null], null);
 } else {
-throw e9083;
+throw e9084;
 
 }
 }});})(tab_selected,editing_key))
@@ -375,9 +384,9 @@ throw e9083;
 ;})(tab_selected,editing_key))
 });
 titanoboa.systems.systems_tab = (function titanoboa$systems$systems_tab(){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.designer-tab","div.designer-tab",-937529570),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.systems.cluster_list,cljs.core.deref.call(null,titanoboa.systems.cluster_state),cljs.core.deref.call(null,titanoboa.systems.selected_node)], null),(cljs.core.truth_(cljs.core.deref.call(null,titanoboa.systems.selected_node))?new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel.panel-primary","div.panel.panel-primary",-1076833638),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"width","width",-384071477),"100%",new cljs.core.Keyword(null,"margin","margin",-995903681),"0px 10px 0px 0px",new cljs.core.Keyword(null,"border-width","border-width",-1512605390),"medium",new cljs.core.Keyword(null,"border-radius","border-radius",419594011),"8px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel-heading","div.panel-heading",-368913146),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.systems-item-title","div.systems-item-title",851391042),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h5","h5",-1829156625),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),cljs.core.deref.call(null,titanoboa.systems.selected_node)], null)], null),(function (){var G__9092 = new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.get.call(null,cljs.core.deref.call(null,titanoboa.systems.cluster_state),cljs.core.deref.call(null,titanoboa.systems.selected_node)));
-var G__9092__$1 = (((G__9092 instanceof cljs.core.Keyword))?G__9092.fqn:null);
-switch (G__9092__$1) {
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.designer-tab","div.designer-tab",-937529570),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.systems.cluster_list,cljs.core.deref.call(null,titanoboa.systems.cluster_state),cljs.core.deref.call(null,titanoboa.systems.selected_node)], null),(cljs.core.truth_(cljs.core.deref.call(null,titanoboa.systems.selected_node))?new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel.panel-primary","div.panel.panel-primary",-1076833638),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"width","width",-384071477),"100%",new cljs.core.Keyword(null,"margin","margin",-995903681),"0px 10px 0px 0px",new cljs.core.Keyword(null,"border-width","border-width",-1512605390),"medium",new cljs.core.Keyword(null,"border-radius","border-radius",419594011),"8px"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.panel-heading","div.panel-heading",-368913146),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.systems-item-title","div.systems-item-title",851391042),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h5","h5",-1829156625),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"b","b",1482224470),cljs.core.deref.call(null,titanoboa.systems.selected_node)], null)], null),(function (){var G__9093 = new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.get.call(null,cljs.core.deref.call(null,titanoboa.systems.cluster_state),cljs.core.deref.call(null,titanoboa.systems.selected_node)));
+var G__9093__$1 = (((G__9093 instanceof cljs.core.Keyword))?G__9093.fqn:null);
+switch (G__9093__$1) {
 case "live":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.label.label-success","span.label.label-success",-156422062),"live"], null);
 
@@ -399,10 +408,10 @@ return cljs.core.reset_BANG_.call(null,titanoboa.systems.selected_view,new cljs.
 })], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),"Systems"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),((cljs.core._EQ_.call(null,cljs.core.deref.call(null,titanoboa.systems.selected_view),new cljs.core.Keyword(null,"log","log",-1595516004)))?"active":null),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"role","role",-736691072),"presentation"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return cljs.core.reset_BANG_.call(null,titanoboa.systems.selected_view,new cljs.core.Keyword(null,"log","log",-1595516004));
 })], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),"Log",((cljs.core._EQ_.call(null,cljs.core.deref.call(null,titanoboa.systems.selected_view),new cljs.core.Keyword(null,"log","log",-1595516004)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"class","class",-2030961996),"close",new cljs.core.Keyword(null,"type","type",1174270348),"button",new cljs.core.Keyword(null,"title","title",636505583),"Refresh",new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
-return titanoboa.api.get_log.call(null,(function (p1__9091_SHARP_){
+return titanoboa.api.get_log.call(null,(function (p1__9092_SHARP_){
 var l = cljs.core.doall.call(null,cljs.core.reduce.call(null,(function (v,i){
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(i),"\n",cljs.core.str.cljs$core$IFn$_invoke$arity$1(v)].join('');
-}),p1__9091_SHARP_));
+}),p1__9092_SHARP_));
 return cljs.core.swap_BANG_.call(null,titanoboa.systems.log_state,cljs.core.assoc,cljs.core.deref.call(null,titanoboa.systems.selected_node),l);
 }),(150),cljs.core.deref.call(null,titanoboa.systems.selected_node));
 })], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.zmdi.zmdi-refresh","span.zmdi.zmdi-refresh",1300044421),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"aria-hidden","aria-hidden",399337029),"true"], null),""], null)], null):null)], null)], null)], null),((cljs.core._EQ_.call(null,cljs.core.deref.call(null,titanoboa.systems.selected_view),new cljs.core.Keyword(null,"log","log",-1595516004)))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.systems.code_mirror_read_only,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"key","key",-1516042587),["log-for-node-",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,titanoboa.systems.selected_node))].join(''),new cljs.core.Keyword(null,"value-atom","value-atom",-887321133),(function (){
@@ -416,20 +425,20 @@ return reagent.core.cursor.call(null,titanoboa.systems.log_state,new cljs.core.P
 ,new cljs.core.Keyword(null,"value","value",305978217),cljs.core.get.call(null,cljs.core.deref.call(null,titanoboa.systems.log_state),cljs.core.deref.call(null,titanoboa.systems.selected_node)),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"margin","margin",-995903681),"0px 5px 2px 2px",new cljs.core.Keyword(null,"height","height",1025178622),(cljs.core.deref.call(null,titanoboa.designer.win_height_atom) - (180))], null),new cljs.core.Keyword(null,"js-cm-opts","js-cm-opts",1231776640),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"lineNumbers","lineNumbers",1374890941),true,new cljs.core.Keyword(null,"showTrailingSpace","showTrailingSpace",1619882009),true,new cljs.core.Keyword(null,"scrollbarStyle","scrollbarStyle",-963515367),"native",new cljs.core.Keyword(null,"viewportMargin","viewportMargin",948056881),(10),new cljs.core.Keyword(null,"readOnly","readOnly",-1749118317),"nocursor"], null)], null)], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.systems.systems_list,cljs.core.get.call(null,cljs.core.deref.call(null,titanoboa.systems.cluster_state),cljs.core.deref.call(null,titanoboa.systems.selected_node))], null))], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [titanoboa.systems.dependencies_editor,cljs.core.PersistentArrayMap.EMPTY], null))], null);
 });
 titanoboa.systems.load_systems = (function titanoboa$systems$load_systems(){
-return titanoboa.api.list_systems.call(null,(function (p1__9094_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.systems.systems_state,p1__9094_SHARP_);
+return titanoboa.api.list_systems.call(null,(function (p1__9095_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.systems.systems_state,p1__9095_SHARP_);
 }));
 });
 titanoboa.systems.load_cluster = (function titanoboa$systems$load_cluster(){
-return titanoboa.api.list_nodes.call(null,(function (p1__9095_SHARP_){
-return cljs.core.reset_BANG_.call(null,titanoboa.systems.cluster_state,p1__9095_SHARP_);
+return titanoboa.api.list_nodes.call(null,(function (p1__9096_SHARP_){
+return cljs.core.reset_BANG_.call(null,titanoboa.systems.cluster_state,p1__9096_SHARP_);
 }));
 });
 titanoboa.systems.load_dependencies = (function titanoboa$systems$load_dependencies(){
-return titanoboa.api.get_dependencies.call(null,(function (p1__9096_SHARP_){
-cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies,new cljs.core.Keyword(null,"dependencies","dependencies",1108064605).cljs$core$IFn$_invoke$arity$1(p1__9096_SHARP_));
+return titanoboa.api.get_dependencies.call(null,(function (p1__9097_SHARP_){
+cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies,new cljs.core.Keyword(null,"dependencies","dependencies",1108064605).cljs$core$IFn$_invoke$arity$1(p1__9097_SHARP_));
 
-return cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies_parsed,cljs.reader.read_string.call(null,new cljs.core.Keyword(null,"dependencies","dependencies",1108064605).cljs$core$IFn$_invoke$arity$1(p1__9096_SHARP_)));
+return cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies_parsed,cljs.reader.read_string.call(null,new cljs.core.Keyword(null,"dependencies","dependencies",1108064605).cljs$core$IFn$_invoke$arity$1(p1__9097_SHARP_)));
 }),(function (e){
 return cljs.core.reset_BANG_.call(null,titanoboa.systems.dependencies_disabled_QMARK_,true);
 }));
