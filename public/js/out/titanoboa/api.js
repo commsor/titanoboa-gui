@@ -98,7 +98,13 @@ return titanoboa.api.list_systems.cljs$core$IFn$_invoke$arity$variadic((argument
 titanoboa.api.list_systems.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__7613){
 var vec__7614 = p__7613;
 var node = cljs.core.nth.call(null,vec__7614,(0),null);
-return ajax.core.GET.call(null,(cljs.core.truth_(node)?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/systems"].join(''):"systems"),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
+return ajax.core.GET.call(null,(cljs.core.truth_((function (){var and__3911__auto__ = node;
+if(cljs.core.truth_(and__3911__auto__)){
+return cljs.core.deref.call(null,titanoboa.api.cluster_enabled_QMARK_);
+} else {
+return and__3911__auto__;
+}
+})())?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/systems"].join(''):"systems"),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
 
 titanoboa.api.list_systems.cljs$lang$maxFixedArity = (1);
@@ -174,35 +180,37 @@ return ajax.core.GET.call(null,"cluster/nodes",new cljs.core.PersistentArrayMap(
 });
 titanoboa.api.update_system_BANG_ = (function titanoboa$api$update_system_BANG_(var_args){
 var args__4502__auto__ = [];
-var len__4499__auto___7639 = arguments.length;
-var i__4500__auto___7640 = (0);
+var len__4499__auto___7640 = arguments.length;
+var i__4500__auto___7641 = (0);
 while(true){
-if((i__4500__auto___7640 < len__4499__auto___7639)){
-args__4502__auto__.push((arguments[i__4500__auto___7640]));
+if((i__4500__auto___7641 < len__4499__auto___7640)){
+args__4502__auto__.push((arguments[i__4500__auto___7641]));
 
-var G__7641 = (i__4500__auto___7640 + (1));
-i__4500__auto___7640 = G__7641;
+var G__7642 = (i__4500__auto___7641 + (1));
+i__4500__auto___7641 = G__7642;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4503__auto__ = ((((2) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((2)),(0),null)):null);
-return titanoboa.api.update_system_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4503__auto__);
+var argseq__4503__auto__ = ((((3) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((3)),(0),null)):null);
+return titanoboa.api.update_system_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__4503__auto__);
 });
 
-titanoboa.api.update_system_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (system,action,p__7635){
-var vec__7636 = p__7635;
-var node = cljs.core.nth.call(null,vec__7636,(0),null);
-return ajax.core.PATCH.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(node)?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/"].join(''):null)),"systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join('')))].join(''),new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"action","action",-811238024),action,new cljs.core.Keyword(null,"wcount","wcount",-764215138),null,new cljs.core.Keyword(null,"scope","scope",-439358418),null], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),((function (vec__7636,node){
-return (function (){
-return cljs.core.List.EMPTY;
-});})(vec__7636,node))
-], null));
+titanoboa.api.update_system_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (system,action,handler,p__7636){
+var vec__7637 = p__7636;
+var node = cljs.core.nth.call(null,vec__7637,(0),null);
+return ajax.core.PATCH.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_((function (){var and__3911__auto__ = node;
+if(cljs.core.truth_(and__3911__auto__)){
+return cljs.core.deref.call(null,titanoboa.api.cluster_enabled_QMARK_);
+} else {
+return and__3911__auto__;
+}
+})())?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/"].join(''):null)),"systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join('')))].join(''),new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"action","action",-811238024),action,new cljs.core.Keyword(null,"wcount","wcount",-764215138),null,new cljs.core.Keyword(null,"scope","scope",-439358418),null], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
 
-titanoboa.api.update_system_BANG_.cljs$lang$maxFixedArity = (2);
+titanoboa.api.update_system_BANG_.cljs$lang$maxFixedArity = (3);
 
 /** @this {Function} */
 titanoboa.api.update_system_BANG_.cljs$lang$applyTo = (function (seq7632){
@@ -210,48 +218,100 @@ var G__7633 = cljs.core.first.call(null,seq7632);
 var seq7632__$1 = cljs.core.next.call(null,seq7632);
 var G__7634 = cljs.core.first.call(null,seq7632__$1);
 var seq7632__$2 = cljs.core.next.call(null,seq7632__$1);
+var G__7635 = cljs.core.first.call(null,seq7632__$2);
+var seq7632__$3 = cljs.core.next.call(null,seq7632__$2);
 var self__4486__auto__ = this;
-return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7633,G__7634,seq7632__$2);
+return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7633,G__7634,G__7635,seq7632__$3);
 });
 
 titanoboa.api.add_worker_BANG_ = (function titanoboa$api$add_worker_BANG_(var_args){
 var args__4502__auto__ = [];
-var len__4499__auto___7648 = arguments.length;
-var i__4500__auto___7649 = (0);
+var len__4499__auto___7650 = arguments.length;
+var i__4500__auto___7651 = (0);
 while(true){
-if((i__4500__auto___7649 < len__4499__auto___7648)){
-args__4502__auto__.push((arguments[i__4500__auto___7649]));
+if((i__4500__auto___7651 < len__4499__auto___7650)){
+args__4502__auto__.push((arguments[i__4500__auto___7651]));
 
-var G__7650 = (i__4500__auto___7649 + (1));
-i__4500__auto___7649 = G__7650;
+var G__7652 = (i__4500__auto___7651 + (1));
+i__4500__auto___7651 = G__7652;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4503__auto__ = ((((1) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((1)),(0),null)):null);
-return titanoboa.api.add_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4503__auto__);
+var argseq__4503__auto__ = ((((2) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((2)),(0),null)):null);
+return titanoboa.api.add_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4503__auto__);
 });
 
-titanoboa.api.add_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (system,p__7644){
-var vec__7645 = p__7644;
-var node = cljs.core.nth.call(null,vec__7645,(0),null);
-return ajax.core.POST.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(node)?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/"].join(''):null)),"systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join(''))),"/workers"].join(''),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),((function (vec__7645,node){
-return (function (){
-return cljs.core.List.EMPTY;
-});})(vec__7645,node))
-], null));
+titanoboa.api.add_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (system,handler,p__7646){
+var vec__7647 = p__7646;
+var node = cljs.core.nth.call(null,vec__7647,(0),null);
+return ajax.core.POST.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_((function (){var and__3911__auto__ = node;
+if(cljs.core.truth_(and__3911__auto__)){
+return cljs.core.deref.call(null,titanoboa.api.cluster_enabled_QMARK_);
+} else {
+return and__3911__auto__;
+}
+})())?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/"].join(''):null)),"systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join(''))),"/workers"].join(''),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
 
-titanoboa.api.add_worker_BANG_.cljs$lang$maxFixedArity = (1);
+titanoboa.api.add_worker_BANG_.cljs$lang$maxFixedArity = (2);
 
 /** @this {Function} */
-titanoboa.api.add_worker_BANG_.cljs$lang$applyTo = (function (seq7642){
-var G__7643 = cljs.core.first.call(null,seq7642);
-var seq7642__$1 = cljs.core.next.call(null,seq7642);
+titanoboa.api.add_worker_BANG_.cljs$lang$applyTo = (function (seq7643){
+var G__7644 = cljs.core.first.call(null,seq7643);
+var seq7643__$1 = cljs.core.next.call(null,seq7643);
+var G__7645 = cljs.core.first.call(null,seq7643__$1);
+var seq7643__$2 = cljs.core.next.call(null,seq7643__$1);
 var self__4486__auto__ = this;
-return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7643,seq7642__$1);
+return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7644,G__7645,seq7643__$2);
+});
+
+titanoboa.api.stop_worker_BANG_ = (function titanoboa$api$stop_worker_BANG_(var_args){
+var args__4502__auto__ = [];
+var len__4499__auto___7661 = arguments.length;
+var i__4500__auto___7662 = (0);
+while(true){
+if((i__4500__auto___7662 < len__4499__auto___7661)){
+args__4502__auto__.push((arguments[i__4500__auto___7662]));
+
+var G__7663 = (i__4500__auto___7662 + (1));
+i__4500__auto___7662 = G__7663;
+continue;
+} else {
+}
+break;
+}
+
+var argseq__4503__auto__ = ((((3) < args__4502__auto__.length))?(new cljs.core.IndexedSeq(args__4502__auto__.slice((3)),(0),null)):null);
+return titanoboa.api.stop_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__4503__auto__);
+});
+
+titanoboa.api.stop_worker_BANG_.cljs$core$IFn$_invoke$arity$variadic = (function (idx,system,handler,p__7657){
+var vec__7658 = p__7657;
+var node = cljs.core.nth.call(null,vec__7658,(0),null);
+return ajax.core.DELETE.call(null,[cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_((function (){var and__3911__auto__ = node;
+if(cljs.core.truth_(and__3911__auto__)){
+return cljs.core.deref.call(null,titanoboa.api.cluster_enabled_QMARK_);
+} else {
+return and__3911__auto__;
+}
+})())?["cluster/nodes/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(node),"/"].join(''):null)),"systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join(''))),"/workers/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(idx)].join(''),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
+});
+
+titanoboa.api.stop_worker_BANG_.cljs$lang$maxFixedArity = (3);
+
+/** @this {Function} */
+titanoboa.api.stop_worker_BANG_.cljs$lang$applyTo = (function (seq7653){
+var G__7654 = cljs.core.first.call(null,seq7653);
+var seq7653__$1 = cljs.core.next.call(null,seq7653);
+var G__7655 = cljs.core.first.call(null,seq7653__$1);
+var seq7653__$2 = cljs.core.next.call(null,seq7653__$1);
+var G__7656 = cljs.core.first.call(null,seq7653__$2);
+var seq7653__$3 = cljs.core.next.call(null,seq7653__$2);
+var self__4486__auto__ = this;
+return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7654,G__7655,G__7656,seq7653__$3);
 });
 
 titanoboa.api.start_job_BANG_ = (function titanoboa$api$start_job_BANG_(system,conf,handler){
@@ -259,20 +319,26 @@ cljs.core.println.call(null,[">>>>>>>>>++++++++ Starting Job with parameters [",
 
 return ajax.core.POST.call(null,["systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join(''))),"/jobs"].join(''),new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),conf,new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
+titanoboa.api.suspend_job_BANG_ = (function titanoboa$api$suspend_job_BANG_(system,jobid,handler){
+return ajax.core.PATCH.call(null,["systems/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(encodeURIComponent([cljs.core.str.cljs$core$IFn$_invoke$arity$1(system)].join(''))),"/jobs/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(jobid)].join(''),new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"command","command",-894540724),"suspend"], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
+});
+titanoboa.api.resume_job_BANG_ = (function titanoboa$api$resume_job_BANG_(system,jobid,handler){
+return ajax.core.PATCH.call(null,["archive/jobs/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(jobid)].join(''),new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"command","command",-894540724),"resume",new cljs.core.Keyword(null,"system","system",-29381724),system], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
+});
 titanoboa.api.list_local_jobs = (function titanoboa$api$list_local_jobs(handler){
 return ajax.core.GET.call(null,"systems/jobs",new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
 titanoboa.api.list_running_jobs = (function titanoboa$api$list_running_jobs(handler){
 return ajax.core.GET.call(null,"cluster/jobs",new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),titanoboa.api.generic_error_handler,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
-titanoboa.api.list_archived_jobs = (function titanoboa$api$list_archived_jobs(limit,offset,p__7651,handler,handler_404){
-var vec__7652 = p__7651;
-var order_by = cljs.core.nth.call(null,vec__7652,(0),null);
-var order = cljs.core.nth.call(null,vec__7652,(1),null);
-return ajax.core.GET.call(null,"archive/jobs",new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"limit","limit",-1355822363),limit,new cljs.core.Keyword(null,"offset","offset",296498311),offset,new cljs.core.Keyword(null,"order-by","order-by",1527318070),order_by,new cljs.core.Keyword(null,"order","order",-1254677256),order], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),((function (vec__7652,order_by,order){
+titanoboa.api.list_archived_jobs = (function titanoboa$api$list_archived_jobs(limit,offset,p__7664,handler,handler_404){
+var vec__7665 = p__7664;
+var order_by = cljs.core.nth.call(null,vec__7665,(0),null);
+var order = cljs.core.nth.call(null,vec__7665,(1),null);
+return ajax.core.GET.call(null,"archive/jobs",new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"limit","limit",-1355822363),limit,new cljs.core.Keyword(null,"offset","offset",296498311),offset,new cljs.core.Keyword(null,"order-by","order-by",1527318070),order_by,new cljs.core.Keyword(null,"order","order",-1254677256),order], null),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),((function (vec__7665,order_by,order){
 return (function (s){
-var G__7655 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(s);
-switch (G__7655) {
+var G__7668 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(s);
+switch (G__7668) {
 case (404):
 return handler_404.call(null,s);
 
@@ -281,7 +347,7 @@ default:
 return titanoboa.api.generic_error_handler.call(null,s);
 
 }
-});})(vec__7652,order_by,order))
+});})(vec__7665,order_by,order))
 ,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null));
 });
 titanoboa.api.load_archived_job = (function titanoboa$api$load_archived_job(uuid,handler){
@@ -289,8 +355,8 @@ return ajax.core.GET.call(null,["archive/jobs/",cljs.core.str.cljs$core$IFn$_inv
 });
 titanoboa.api.get_dependencies = (function titanoboa$api$get_dependencies(handler,handler_404){
 return ajax.core.GET.call(null,"cluster/dependencies",new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"writer","writer",-277568236),titanoboa.api.w,new cljs.core.Keyword(null,"response-format","response-format",1664465322),new cljs.core.Keyword(null,"transit","transit",359458387),new cljs.core.Keyword(null,"raw","raw",1604651272),true,new cljs.core.Keyword(null,"reader","reader",169660853),titanoboa.api.r,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776),(function (s){
-var G__7657 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(s);
-switch (G__7657) {
+var G__7670 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(s);
+switch (G__7670) {
 case (404):
 return handler_404.call(null,s);
 

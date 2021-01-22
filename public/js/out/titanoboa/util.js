@@ -7,14 +7,14 @@ return cljs.core.map.call(null,cljs.core.partial.call(null,cljs.core.nth,coll),i
 });
 titanoboa.util.update_in__STAR_ = (function titanoboa$util$update_in__STAR_(var_args){
 var args__4502__auto__ = [];
-var len__4499__auto___7673 = arguments.length;
-var i__4500__auto___7674 = (0);
+var len__4499__auto___7686 = arguments.length;
+var i__4500__auto___7687 = (0);
 while(true){
-if((i__4500__auto___7674 < len__4499__auto___7673)){
-args__4502__auto__.push((arguments[i__4500__auto___7674]));
+if((i__4500__auto___7687 < len__4499__auto___7686)){
+args__4502__auto__.push((arguments[i__4500__auto___7687]));
 
-var G__7675 = (i__4500__auto___7674 + (1));
-i__4500__auto___7674 = G__7675;
+var G__7688 = (i__4500__auto___7687 + (1));
+i__4500__auto___7687 = G__7688;
 continue;
 } else {
 }
@@ -25,26 +25,26 @@ var argseq__4503__auto__ = ((((3) < args__4502__auto__.length))?(new cljs.core.I
 return titanoboa.util.update_in__STAR_.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__4503__auto__);
 });
 
-titanoboa.util.update_in__STAR_.cljs$core$IFn$_invoke$arity$variadic = (function (m,p__7669,f,args){
-var vec__7670 = p__7669;
-var seq__7671 = cljs.core.seq.call(null,vec__7670);
-var first__7672 = cljs.core.first.call(null,seq__7671);
-var seq__7671__$1 = cljs.core.next.call(null,seq__7671);
-var k = first__7672;
-var ks = seq__7671__$1;
+titanoboa.util.update_in__STAR_.cljs$core$IFn$_invoke$arity$variadic = (function (m,p__7682,f,args){
+var vec__7683 = p__7682;
+var seq__7684 = cljs.core.seq.call(null,vec__7683);
+var first__7685 = cljs.core.first.call(null,seq__7684);
+var seq__7684__$1 = cljs.core.next.call(null,seq__7684);
+var k = first__7685;
+var ks = seq__7684__$1;
 if((k === cljs.core._STAR_)){
 var idx = ((cljs.core.map_QMARK_.call(null,m))?cljs.core.keys.call(null,m):cljs.core.range.call(null,cljs.core.count.call(null,m)));
 if(ks){
-return cljs.core.reduce.call(null,((function (idx,vec__7670,seq__7671,first__7672,seq__7671__$1,k,ks){
-return (function (p1__7661_SHARP_,p2__7662_SHARP_){
-return cljs.core.assoc.call(null,p1__7661_SHARP_,p2__7662_SHARP_,cljs.core.apply.call(null,titanoboa.util.update_in__STAR_,cljs.core.get.call(null,p1__7661_SHARP_,p2__7662_SHARP_),ks,f,args));
-});})(idx,vec__7670,seq__7671,first__7672,seq__7671__$1,k,ks))
+return cljs.core.reduce.call(null,((function (idx,vec__7683,seq__7684,first__7685,seq__7684__$1,k,ks){
+return (function (p1__7674_SHARP_,p2__7675_SHARP_){
+return cljs.core.assoc.call(null,p1__7674_SHARP_,p2__7675_SHARP_,cljs.core.apply.call(null,titanoboa.util.update_in__STAR_,cljs.core.get.call(null,p1__7674_SHARP_,p2__7675_SHARP_),ks,f,args));
+});})(idx,vec__7683,seq__7684,first__7685,seq__7684__$1,k,ks))
 ,m,idx);
 } else {
-return cljs.core.reduce.call(null,((function (idx,vec__7670,seq__7671,first__7672,seq__7671__$1,k,ks){
-return (function (p1__7663_SHARP_,p2__7664_SHARP_){
-return cljs.core.assoc.call(null,p1__7663_SHARP_,p2__7664_SHARP_,cljs.core.apply.call(null,f,cljs.core.get.call(null,p1__7663_SHARP_,p2__7664_SHARP_),args));
-});})(idx,vec__7670,seq__7671,first__7672,seq__7671__$1,k,ks))
+return cljs.core.reduce.call(null,((function (idx,vec__7683,seq__7684,first__7685,seq__7684__$1,k,ks){
+return (function (p1__7676_SHARP_,p2__7677_SHARP_){
+return cljs.core.assoc.call(null,p1__7676_SHARP_,p2__7677_SHARP_,cljs.core.apply.call(null,f,cljs.core.get.call(null,p1__7676_SHARP_,p2__7677_SHARP_),args));
+});})(idx,vec__7683,seq__7684,first__7685,seq__7684__$1,k,ks))
 ,m,idx);
 }
 } else {
@@ -59,15 +59,15 @@ return cljs.core.assoc.call(null,m,k,cljs.core.apply.call(null,f,cljs.core.get.c
 titanoboa.util.update_in__STAR_.cljs$lang$maxFixedArity = (3);
 
 /** @this {Function} */
-titanoboa.util.update_in__STAR_.cljs$lang$applyTo = (function (seq7665){
-var G__7666 = cljs.core.first.call(null,seq7665);
-var seq7665__$1 = cljs.core.next.call(null,seq7665);
-var G__7667 = cljs.core.first.call(null,seq7665__$1);
-var seq7665__$2 = cljs.core.next.call(null,seq7665__$1);
-var G__7668 = cljs.core.first.call(null,seq7665__$2);
-var seq7665__$3 = cljs.core.next.call(null,seq7665__$2);
+titanoboa.util.update_in__STAR_.cljs$lang$applyTo = (function (seq7678){
+var G__7679 = cljs.core.first.call(null,seq7678);
+var seq7678__$1 = cljs.core.next.call(null,seq7678);
+var G__7680 = cljs.core.first.call(null,seq7678__$1);
+var seq7678__$2 = cljs.core.next.call(null,seq7678__$1);
+var G__7681 = cljs.core.first.call(null,seq7678__$2);
+var seq7678__$3 = cljs.core.next.call(null,seq7678__$2);
 var self__4486__auto__ = this;
-return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7666,G__7667,G__7668,seq7665__$3);
+return self__4486__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7679,G__7680,G__7681,seq7678__$3);
 });
 
 titanoboa.util.tokey = (function titanoboa$util$tokey(s){
@@ -86,8 +86,8 @@ return cljs.core.keyword.call(null,s);
 });
 titanoboa.util.keyify = (function titanoboa$util$keyify(key,maps_array){
 
-return cljs.core.reduce.call(null,(function (p1__7676_SHARP_,p2__7677_SHARP_){
-return cljs.core.merge.call(null,p1__7676_SHARP_,cljs.core.PersistentArrayMap.createAsIfByAssoc([key.call(null,p2__7677_SHARP_),p2__7677_SHARP_]));
+return cljs.core.reduce.call(null,(function (p1__7689_SHARP_,p2__7690_SHARP_){
+return cljs.core.merge.call(null,p1__7689_SHARP_,cljs.core.PersistentArrayMap.createAsIfByAssoc([key.call(null,p2__7690_SHARP_),p2__7690_SHARP_]));
 }),cljs.core.PersistentArrayMap.EMPTY,maps_array);
 });
 titanoboa.util.readable_interval = (function titanoboa$util$readable_interval(i){

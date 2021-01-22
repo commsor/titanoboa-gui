@@ -103,8 +103,8 @@ linked.set.LinkedSet.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (coll
 var self__ = this;
 var coll__$1 = this;
 return ((cljs.core.set_QMARK_.call(null,other)) && ((cljs.core.count.call(null,coll__$1) === cljs.core.count.call(null,other))) && (cljs.core.every_QMARK_.call(null,((function (coll__$1){
-return (function (p1__9134_SHARP_){
-return cljs.core.contains_QMARK_.call(null,coll__$1,p1__9134_SHARP_);
+return (function (p1__9159_SHARP_){
+return cljs.core.contains_QMARK_.call(null,coll__$1,p1__9159_SHARP_);
 });})(coll__$1))
 ,other)));
 });
@@ -146,38 +146,38 @@ return (new linked.set.LinkedSet(cljs.core.assoc.call(null,self__.linked_map,o,n
 });
 
 linked.set.LinkedSet.prototype.call = (function() {
-var G__9136 = null;
-var G__9136__2 = (function (self__,k){
+var G__9161 = null;
+var G__9161__2 = (function (self__,k){
 var self__ = this;
 var self____$1 = this;
 var coll = self____$1;
 return cljs.core._lookup.call(null,coll,k);
 });
-var G__9136__3 = (function (self__,k,not_found){
+var G__9161__3 = (function (self__,k,not_found){
 var self__ = this;
 var self____$1 = this;
 var coll = self____$1;
 return cljs.core._lookup.call(null,coll,k,not_found);
 });
-G__9136 = function(self__,k,not_found){
+G__9161 = function(self__,k,not_found){
 switch(arguments.length){
 case 2:
-return G__9136__2.call(this,self__,k);
+return G__9161__2.call(this,self__,k);
 case 3:
-return G__9136__3.call(this,self__,k,not_found);
+return G__9161__3.call(this,self__,k,not_found);
 }
 throw(new Error('Invalid arity: ' + (arguments.length - 1)));
 };
-G__9136.cljs$core$IFn$_invoke$arity$2 = G__9136__2;
-G__9136.cljs$core$IFn$_invoke$arity$3 = G__9136__3;
-return G__9136;
+G__9161.cljs$core$IFn$_invoke$arity$2 = G__9161__2;
+G__9161.cljs$core$IFn$_invoke$arity$3 = G__9161__3;
+return G__9161;
 })()
 ;
 
-linked.set.LinkedSet.prototype.apply = (function (self__,args9135){
+linked.set.LinkedSet.prototype.apply = (function (self__,args9160){
 var self__ = this;
 var self____$1 = this;
-return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone.call(null,args9135)));
+return self____$1.call.apply(self____$1,[self____$1].concat(cljs.core.aclone.call(null,args9160)));
 });
 
 linked.set.LinkedSet.prototype.cljs$core$IFn$_invoke$arity$1 = (function (k){
